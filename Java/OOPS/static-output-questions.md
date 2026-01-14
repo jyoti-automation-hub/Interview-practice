@@ -1,1 +1,93 @@
 
+# Java OOPS – Static Output Based Interview Questions
+
+These are interview-focused static keyword output questions commonly asked in SDET interviews.
+
+---
+
+## Question 1: Static block vs Constructor execution order
+
+```java
+class Test {
+    static {
+        System.out.println("Static block");
+    }
+
+    Test() {
+        System.out.println("Constructor");
+    }
+
+    public static void main(String[] args) {
+        new Test();
+        new Test();
+    }
+}
+```
+
+Output:
+Static block  
+Constructor  
+Constructor  
+
+Reason:
+Static block runs once when the class is loaded. Constructor runs every time an object is created.
+
+---
+
+## Question 2: Static variable shared across objects
+
+```java
+class Counter {
+    static int count = 0;
+
+    Counter() {
+        count++;
+        System.out.println(count);
+    }
+
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        new Counter();
+    }
+}
+```
+
+Output:
+1  
+2  
+3  
+
+Reason:
+Static variables are shared across all objects, so the value keeps increasing.
+
+---
+
+## Question 3: Static method vs instance method (method hiding)
+
+```java
+class Parent {
+    static void show() {
+        System.out.println("Parent static");
+    }
+}
+
+class Child extends Parent {
+    static void show() {
+        System.out.println("Child static");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Parent p = new Child();
+        p.show();
+    }
+}
+```
+
+Output:
+Parent static  
+
+Reason:
+Static methods are not overridden. They are resolved at compile time using the reference type.
