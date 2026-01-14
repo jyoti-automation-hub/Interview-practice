@@ -25,7 +25,7 @@ public class Test {
         new Child();
     }
 }
-
+```
 Output:
 Parent
 Child
@@ -88,7 +88,7 @@ public class Test {
         new Child();
     }
 }
-
+```
 Output:
 Child show
 
@@ -127,7 +127,7 @@ public class Test {
         p.show();
     }
 }
-
+```
 Output:
 Parent constructor
 Child constructor
@@ -164,7 +164,7 @@ public class Test {
         new Child();
     }
 }
-
+```
 Output:
 0
 
