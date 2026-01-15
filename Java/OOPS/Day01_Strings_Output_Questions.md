@@ -50,22 +50,16 @@ public class Test {
 
 ```
 
-Using new String() creates a new object in heap memory every time.
-So s1 and s2 point to different objects, making == return false.
-However, .equals() checks only the content, and since both values are “Java”, it returns true.
+### 🧠 Explanation
 
+- `new String("Java")` creates a **new object in heap memory every time**
+- So `s1` and `s2` point to **different memory locations**
+- `==` compares **references**, not values → returns `false`
+- `.equals()` compares **content**, and both values are `"Java"` → returns `true`
 
-Key Takeaways
-	•	== compares references
-	•	.equals() compares values
-	•	String literals use String Constant Pool
-	•	new String() creates a new object every time
+### 👉 Interview takeaway
 
-	🧩 Quick Interview Summary 
-	•	Why String literals are preferred?
-→ They save memory using String Constant Pool.
-	•	Difference between == and .equals()?
-→ == compares reference, .equals() compares value.
-	•	Does new String() use String pool?
-→ No, it creates a new heap object every time.
-
+- `==` → reference comparison  
+- `.equals()` → value comparison  
+- `new String()` does **not** use String Constant Pool  
+- Prefer **string literals** for memory efficiency
