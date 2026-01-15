@@ -34,7 +34,8 @@ String literals save memory because Java reuses objects from the String pool.
 
 ---
 
-	## Question 2: `new String()` vs `==` and `.equals()`
+	## Question 2: new String() vs == and .equals()
+	
 ### Code
 ```java
 public class Test {
@@ -46,6 +47,7 @@ public class Test {
         System.out.println(s1.equals(s2));
     }
 }
+
 ```
 
 Using new String() creates a new object in heap memory every time.
