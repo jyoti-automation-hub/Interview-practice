@@ -18,15 +18,15 @@ Output:
 true
 true
 
-🧠 Human Explanation
-	•	"Java" is a string literal
-	•	Java stores string literals in the String Constant Pool
-    •	Since both s1 and s2 have the same value "Java", only one object is created in the pool
-	•	Both variables point to the same memory location
+🧠 Explanation
+	- "Java" is a string literal
+	- Java stores string literals in the String Constant Pool
+    - Since both s1 and s2 have the same value "Java", only one object is created in the pool
+	- Both variables point to the same memory location
 
 So:
-	•	s1 == s2 → true (same reference)
-	•	s1.equals(s2) → true (same value)
+	- s1 == s2 → true (same reference)
+	- s1.equals(s2) → true (same value)
 
 👉 Interview takeaway:
 String literals save memory because Java reuses objects from the String pool.
