@@ -67,7 +67,6 @@ public class Test {
 
 # 16 jan 2026 
 # String Concatenation – SCP vs Heap (Golden Rules)
-
 ---
 
 ## RULE 1 – Literal + Literal → Compile Time → SCP
