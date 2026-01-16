@@ -22,6 +22,7 @@ public class Test {
 **Output**
 - 3
 
+
 **Explanation**
 - `size()` method returns number of elements present in the ArrayList  
 - We added 3 elements → 10, 20, 30  
