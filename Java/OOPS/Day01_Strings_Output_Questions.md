@@ -63,3 +63,66 @@ public class Test {
 - `.equals()` → value comparison  
 - `new String()` does **not** use String Constant Pool  
 - Prefer **string literals** for memory efficiency
+
+
+# 16 jan 2026 
+# String Concatenation – SCP vs Heap (Golden Rules)
+
+---
+
+## RULE 1 – Literal + Literal → Compile Time → SCP
+
+```java
+String a = "Hello";
+String b = "Hel" + "lo";
+
+System.out.println(a == b);   // true
+```
+
+**Why**
+- Both sides are pure string literals  
+- Compiler joins them at compile time  
+- Only ONE object created in String Constant Pool  
+- == compares reference → same reference → true
+
+---
+
+## RULE 2 – Variable + Anything → Runtime → Heap
+
+```java
+String x = "Hel";
+String y = x + "lo";
+
+System.out.println("Hello" == y);   // false
+```
+
+**Why**
+- x is a variable → concat happens at runtime  
+- Runtime concat creates NEW object in heap  
+- Reference of y ≠ reference of "Hello" in SCP  
+- == compares reference → false
+
+---
+
+## RULE 3 – final Variable + Literal → Compile Time → SCP
+
+```java
+final String p = "Hel";
+String q = p + "lo";
+
+System.out.println("Hello" == q);   // true
+```
+
+**Why**
+- final variable is treated as constant by compiler  
+- Compiler optimizes as: "Hel" + "lo"  
+- Becomes compile-time concatenation → SCP  
+- Same reference → == returns true
+
+---
+
+## MEMORY FORMULA (Remember This)
+
+- literal + literal → SCP → true with ==
+- variable + anything → HEAP → false with ==
+- final variable + literal → SCP → true with ==
