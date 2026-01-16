@@ -125,3 +125,117 @@ System.out.println("Hello" == q);   // true
 - literal + literal → SCP → true with ==
 - variable + anything → HEAP → false with ==
 - final variable + literal → SCP → true with ==
+
+
+---
+
+# Day 4 – Reference, Immutability & Real Logic
+
+## 1. String Immutability Trap
+
+```java
+String a = "hello";
+a.toUpperCase();
+System.out.println(a);
+```
+
+**Output**
+- hello
+
+**Explanation**
+- String is immutable  
+- toUpperCase() creates a new object  
+- Since result is not reassigned, original string remains unchanged
+
+---
+
+## 2. StringBuilder is Mutable
+
+```java
+StringBuilder sb = new StringBuilder("hi");
+sb.append("bye");
+System.out.println(sb);
+```
+
+**Output**
+- hibye
+
+**Explanation**
+- StringBuilder modifies the same object  
+- No new object is created  
+- Changes happen in place (mutable behavior)
+
+---
+
+## 3. Primitive vs Reference
+
+```java
+int x = 5;
+int y = x;
+y = 10;
+System.out.println(x);
+```
+
+**Output**
+- 5
+
+**Explanation**
+- Primitive types copy value, not reference  
+- Changing y does not affect x
+
+---
+
+## 4. Reference Sharing Trap
+
+```java
+List<Integer> data = new ArrayList<>();
+data.add(1);
+data.add(2);
+
+List<Integer> backup = data;
+backup.add(3);
+
+System.out.println(data);
+```
+
+**Output**
+- [1, 2, 3]
+
+**Explanation**
+- backup = data creates another reference to same object  
+- No new list created  
+- Modification via backup affects data
+
+---
+
+## 5. Independent Copy – Correct Way
+
+```java
+List<Integer> data = new ArrayList<>();
+data.add(1);
+data.add(2);
+
+List<Integer> backup = new ArrayList<>(data);
+backup.add(3);
+
+System.out.println(data);
+System.out.println(backup);
+```
+
+**Output**
+- [1, 2]  
+- [1, 2, 3]
+
+**Explanation**
+- new ArrayList<>(data) creates a new object  
+- Values are copied, not the reference  
+- Changes in backup do not affect data
+
+---
+
+## Key Takeaways
+
+- No `new` keyword → same object, only new reference  
+- String is immutable, StringBuilder is mutable  
+- Primitive types copy values, objects copy references  
+- Use `new ArrayList<>(oldList)` for independent copy
