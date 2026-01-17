@@ -75,10 +75,6 @@ class WaitUtil {
 
 When a child class replaces the parent’s method with its own version — that’s method overriding.
 
-For example, adding waits to a click method — without rewriting the entire method from scratch.
-
-✔ Test classes do NOT extend Page classes.
-
 ### **Why would a child class replace the parent’s method?**
 
 Because sometimes the parent’s version is not enough or needs improvement.
