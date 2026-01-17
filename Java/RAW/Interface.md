@@ -26,7 +26,7 @@ This allows us to switch browsers without changing test code.
 
 ---
 
-## **Q3. What is Loose Coupling? (Most Asked)**
+## **Q3. What is Loose Coupling?**
 
 **Answer – One Line:**  
 Loose coupling means **my code depends on an interface, not on a concrete class**, so implementation can change without changing the test.
