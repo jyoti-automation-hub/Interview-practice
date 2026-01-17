@@ -4,7 +4,7 @@
 
 ## **Q1. What is Abstraction?**
 
-**Answer (My Definition):**  
+**Answer :**  
 Abstraction means hiding the implementation details and showing only the essential features.
 
 In my automation framework, I don’t write locators directly in the test class.  
