@@ -1,4 +1,4 @@
-# **Basic Manual Testing Questions – Service Repair **
+# **Basic Manual Testing Questions – Service Repair**
 
 ---
 
