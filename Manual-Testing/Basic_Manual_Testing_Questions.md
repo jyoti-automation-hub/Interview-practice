@@ -4,7 +4,7 @@
 
 ## **1. Explain What You Tested in Your Project**
 
-I worked on **Service Repair platform** where customers can purchase genuine parts, rent tools, and perform device repair on their own.  
+ex- sample answer- I worked on **Service Repair platform** where customers can purchase genuine parts, rent tools, and perform device repair on their own.  
 My role was **Manual and Automation testing** for:
 - Ordering flow  
 - Compatibility validation  
