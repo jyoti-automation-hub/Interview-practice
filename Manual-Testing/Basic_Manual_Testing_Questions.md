@@ -255,3 +255,116 @@ White box = testing the **internal code and logic**, mostly done by developers.
 Rechecking existing features to ensure new changes didn’t break them.
 
 ---
+
+---
+
+## **18. Smoke vs Regression Testing**
+
+**Smoke Testing (Human Meaning):**  
+Quick check to see if the main features are working after a new build.  
+It is like checking “is the application stable enough to start detailed testing?”
+
+**Regression Testing (Human Meaning):**  
+Rechecking existing features to make sure new changes didn’t break anything.
+
+### Example from my project
+- Smoke → login, add to cart, checkout working or not  
+- Regression → complete end-to-end flows across ordering, payment, returns
+
+---
+
+## **19. Test Case vs Test Scenario**
+
+**Test Scenario:**  
+A high-level idea of what to test.  
+It tells *what* to verify, not *how*.
+
+**Test Case:**  
+Step-by-step detailed instructions to execute that scenario.
+
+### Simple Example
+- Scenario: Verify login functionality  
+- Test Case:  
+  1. Open login page  
+  2. Enter valid username  
+  3. Enter valid password  
+  4. Click login  
+  5. Verify user lands on home page
+
+---
+
+## **20. Bug vs Defect vs Error (Simple Way)**
+
+- **Error:** Mistake made by developer in code  
+- **Defect:** Issue found by QA during testing  
+- **Bug:** Problem found after release by user
+
+In day-to-day life we mostly use the word **defect** while testing.
+
+---
+
+## **21. What is Traceability Matrix (RTM)**
+
+Traceability matrix is a simple mapping between  
+**requirements → test scenarios → test cases → defects.**
+
+### In Human Words
+It helps to make sure:
+- every requirement has test cases  
+- nothing is missed  
+- we can show coverage to stakeholders
+
+### Example Use
+If someone asks:  
+“Which test cases cover payment requirement?”  
+RTM gives that answer quickly.
+
+---
+
+## **22. What is Smoke Testing**
+
+**Smoke Testing – Human Meaning**
+
+Smoke testing is a quick health check of the new build to see  
+whether the application is stable enough for detailed testing.
+
+### In simple words
+- Are the main features working?  
+- Can we start real testing or should we reject the build?
+
+### Example from my project
+- Serial validation page is opening  
+- Add to cart is working  
+- Checkout page loads  
+- Payment page opens  
+
+If any of these fail → we reject the build.
+
+---
+
+## **23. What is Sanity Testing**
+
+**Sanity Testing – Human Meaning**
+
+Sanity testing is focused testing done after a specific fix or small change  
+to confirm that the fix is working and related areas are fine.
+
+### Example
+Developer fixed: “Logout not working”
+
+Sanity means:
+- Check logout functionality  
+- Check nearby flows like session, profile, navigation  
+- Not the whole application
+
+---
+
+### Simple Difference
+
+- **Smoke:** Build level, broad check  
+- **Sanity:** Feature level, narrow check
+
+Smoke → before detailed testing  
+Sanity → after a fix or small change
+
+---
