@@ -33,3 +33,34 @@ Here:
 - The Lambda receives **WebDriver as input**  
 - It returns the **boolean result** of `isDisplayed()`  
 - `wait.until()` uses that boolean to decide when to stop waiting
+---
+
+## Q. Write Lambda implementation for this interface
+
+```java
+interface Shape {
+    void draw();
+}
+```
+
+### Correct Lambda Code
+
+```java
+Shape s = () -> System.out.println("Rectangle");
+
+s.draw();
+```
+
+### Explanation
+
+- `Shape s` → variable of the functional interface  
+- `()` → no parameters because draw() has no parameters  
+- `->` → separates input and action  
+- `System.out.println("Rectangle")` → implementation of draw() method  
+- `s.draw()` → calls the Lambda implementation
+
+### Why This Works
+
+- Shape is a **Functional Interface** (one abstract method)  
+- Lambda provides implementation for that single method  
+- No class or object creation is required
