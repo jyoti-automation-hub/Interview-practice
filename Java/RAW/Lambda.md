@@ -68,7 +68,7 @@ s.draw();
 
 ---
 
-## Q5. Convert Old Runnable Code to Lambda
+## Q. Convert Old Runnable Code to Lambda
 
 ### Old Java 7 Style
 
@@ -108,7 +108,7 @@ new Thread(r).start();
 
 ---
 
-## Q6. Functional Interface Rules
+## Q. Functional Interface Rules
 
 ### Can a Functional Interface have:
 
@@ -123,3 +123,99 @@ new Thread(r).start();
 ### Perfect Interview Answer
 
 > A functional interface can contain default and static methods, but it must contain **exactly one abstract method**. Otherwise, Lambda expressions cannot be used with it.
+
+---
+
+# Lambda Use Case in Selenium – Dropdown Validation
+
+## Scenario
+
+I needed to verify that all values in a dropdown match the expected values from the requirement:
+
+**Expected:**  
+Apple, Mango, Banana, Orange
+
+---
+
+## 1. Selenium + Traditional Java (Without Lambda)
+
+```java
+// Step 1: Get all dropdown elements
+List<WebElement> options = driver.findElements(By.id("fruits"));
+
+// Step 2: Convert WebElements → String using loop
+List<String> actual = new ArrayList<>();
+
+for (WebElement e : options) {
+    actual.add(e.getText());
+}
+
+// Step 3: Expected values from requirement
+List<String> expected = Arrays.asList("Apple", "Mango", "Banana", "Orange");
+
+// Step 4: Validation
+Assert.assertEquals(actual, expected);
+```
+
+### What This Code Does
+- Manually loops through each WebElement  
+- Extracts text using `getText()`  
+- Adds values one by one into a new list  
+- Compares with expected list
+
+---
+
+## 2. Selenium + Lambda / Streams (Modern Way)
+
+```java
+// Step 1: Get all dropdown elements (Selenium part remains same)
+List<WebElement> options = driver.findElements(By.id("fruits"));
+
+// Step 2: Convert using Lambda + Stream
+List<String> actual =
+        options.stream()                 // converts List<WebElement> → Stream
+               .map(e -> e.getText())    // converts each WebElement → String text
+               .collect(Collectors.toList()); // collects all texts into List<String>
+
+// Step 3: Expected values
+List<String> expected = Arrays.asList("Apple", "Mango", "Banana", "Orange");
+
+// Step 4: Validation
+Assert.assertEquals(actual, expected);
+```
+
+---
+
+## Line-by-Line Meaning of Lambda Code
+
+### 1. `options.stream()`
+- Opens the list as a stream  
+- Allows us to process elements one by one in functional style
+
+### 2. `.map(e -> e.getText())`
+- For each WebElement `e`  
+- call `getText()`  
+- Convert: **WebElement → String**
+
+### 3. `.collect(Collectors.toList())`
+- Gathers all converted texts  
+- Creates a new `List<String>`
+
+---
+
+## What Actually Improved
+
+- Selenium locator part remains the same  
+- Lambda only improves the **processing logic**
+- Removes manual for-loop and temporary add logic  
+- Code expresses **WHAT we want**, not **HOW to loop**
+
+---
+
+## Perfect Interview Explanation
+
+> In dropdown validation, instead of writing a manual loop to extract text from each WebElement, I used Lambda with streams:  
+> `options.stream().map(e -> e.getText()).collect(toList())`.  
+> This directly converts WebElements to String list, making the validation cleaner and less error-prone.
+
+---
