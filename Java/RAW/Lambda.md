@@ -1,4 +1,4 @@
-# Lambda – Interview Questions (SDET 4+ YOE)
+# Lambda – Interview Questions
 
 ---
 
