@@ -1,4 +1,4 @@
-# **Scenario Based Manual Testing Questions – Self Service Repair**
+# **Scenario Based Manual Testing Questions –**
 
 ---
 
