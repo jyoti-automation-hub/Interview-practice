@@ -64,3 +64,62 @@ s.draw();
 - Shape is a **Functional Interface** (one abstract method)  
 - Lambda provides implementation for that single method  
 - No class or object creation is required
+
+
+---
+
+## Q5. Convert Old Runnable Code to Lambda
+
+### Old Java 7 Style
+
+```java
+Runnable r = new Runnable() {
+    public void run() {
+        System.out.println("Hi");
+    }
+};
+
+r.run();
+```
+
+### Lambda Style (Java 8)
+
+```java
+Runnable r = () -> System.out.println("Hi");
+
+r.run();
+```
+
+### Why This Works
+
+- Runnable is a **Functional Interface** (only one abstract method → run())
+- Lambda directly provides implementation for that single method
+- No need to create an anonymous class
+
+### Key Interview Points
+
+- Lambda does **not** create a Thread  
+- It only provides implementation of `run()`  
+- Thread creation is separate:
+
+```java
+new Thread(r).start();
+```
+
+---
+
+## Q6. Functional Interface Rules
+
+### Can a Functional Interface have:
+
+1. **default methods?** → ✅ YES  
+2. **static methods?** → ✅ YES  
+3. **more than one abstract method?** → ❌ NO
+
+### One-Line Explanation
+
+- If more than one abstract method exists → it is **NOT** a functional interface and Lambda will not work.
+
+### Perfect Interview Answer
+
+> A functional interface can contain default and static methods, but it must contain **exactly one abstract method**. Otherwise, Lambda expressions cannot be used with it.
