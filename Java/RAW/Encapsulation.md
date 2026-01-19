@@ -144,3 +144,64 @@ Encapsulation in Automation =
 > → safer framework  
 > → single point change  
 > → clean POM design.
+---
+
+## Level 3 & Level 4 – Coding + FAANG Tricky
+
+---
+
+## Q10. Write a small code showing Encapsulation
+
+```java
+class User {
+
+    private String username;
+
+    public void setUsername(String u) {
+        username = u;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+}
+```
+
+Explanation  
+- username is private → direct access not allowed  
+- setUsername() → controlled way to modify value  
+- getUsername() → controlled way to read value  
+This is Encapsulation.
+
+---
+
+## Q11. Why can getUsername() access a private variable?
+
+Getter can access the private variable because private members are accessible within the same class.  
+Since the getter method is part of that class, it can read the private variable.
+
+---
+
+## Q12. Can we achieve Encapsulation without getters and setters?
+
+Yes, Encapsulation can be achieved without getters and setters.  
+Encapsulation means private data + controlled access through methods.  
+In POM, we keep locators private and tests access them through page methods like login() or clickCheckout().  
+So even without getters/setters, it is still Encapsulation.
+
+---
+
+## Q13. Is POM more about Abstraction or Encapsulation?
+
+POM supports both Abstraction and Encapsulation.  
+It is Abstraction because tests see only high-level actions like login() and don’t see internal Selenium code.  
+It is Encapsulation because locators are private and accessed only through page methods.  
+But POM is more about Encapsulation, since the main goal is protecting locators and giving controlled access.
+
+---
+
+## Q14. How is Encapsulation related to security in automation framework?
+
+Encapsulation improves security because sensitive data like locators, credentials, or config values are kept private and cannot be accessed directly by tests.  
+Access happens only through controlled methods, so no one can accidentally modify internal framework data.  
+This prevents misuse of locators and reduces risk of breaking tests due to direct access.
