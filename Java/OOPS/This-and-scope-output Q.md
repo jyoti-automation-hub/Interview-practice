@@ -1,8 +1,7 @@
 ---
 
 # Scope & this Keyword – Practical Output Questions
-
-## Question 1 – Without `this` (Parameter Shadowing)
+# Question 1 – Without `this` (Parameter Shadowing)
 
 ```java
 class Test {
