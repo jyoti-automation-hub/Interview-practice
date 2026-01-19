@@ -1,3 +1,56 @@
+# Lambda – Interview Questions (SDET 4+ YOE)
+
+---
+
+## Q1. In your projects, where have you actually used Lambda expressions?
+
+### Answer
+
+In my framework I use Lambda mainly in explicit waits.  
+Instead of writing long ExpectedCondition classes, I pass the condition directly in:
+
+```java
+wait.until(driver -> element.isDisplayed());
+```
+
+This made the wait logic shorter and more readable.
+
+---
+
+## Q2. What is a Functional Interface?  
+### And why are Lambdas tied only to Functional Interfaces?
+
+### Answer
+
+A Functional Interface is an interface with exactly one abstract method.  
+Lambda is tied to it because Lambda provides implementation for that single method, and if there were multiple methods, Lambda wouldn’t know which one to implement.
+
+---
+
+## Q7. Lambda Syntax Recognition
+
+Which of these are valid Lambdas?
+
+A) `() -> System.out.println("hi")`  
+B) `(a,b) -> a+b`  
+C) `(int a) -> { return a; }`  
+D) `(a,b,c) -> System.out.println(a)`
+
+### Answer
+
+All are valid because each follows the Lambda structure:
+
+```
+parameters → body
+```
+
+Java allows:
+- zero parameters  
+- one or multiple parameters  
+- optional data types
+
+---
+
 ## Q. Explain this Lambda line technically
 
 ```java
