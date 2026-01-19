@@ -27,7 +27,7 @@ Lambda is tied to it because Lambda provides implementation for that single meth
 
 ---
 
-## Q7. Lambda Syntax Recognition
+## Q3. Lambda Syntax Recognition
 
 Which of these are valid Lambdas?
 
@@ -51,7 +51,7 @@ Java allows:
 
 ---
 
-## Q. Explain this Lambda line technically
+## Q4. Explain this Lambda line technically
 
 ```java
 wait.until(driver -> driver.findElement(By.id("x")).isDisplayed());
@@ -88,7 +88,7 @@ Here:
 - `wait.until()` uses that boolean to decide when to stop waiting
 ---
 
-## Q. Write Lambda implementation for this interface
+## Q5. Write Lambda implementation for this interface
 
 ```java
 interface Shape {
@@ -121,7 +121,7 @@ s.draw();
 
 ---
 
-## Q. Convert Old Runnable Code to Lambda
+## Q6. Convert Old Runnable Code to Lambda
 
 ### Old Java 7 Style
 
@@ -161,7 +161,7 @@ new Thread(r).start();
 
 ---
 
-## Q. Functional Interface Rules
+## Q7. Functional Interface Rules
 
 ### Can a Functional Interface have:
 
