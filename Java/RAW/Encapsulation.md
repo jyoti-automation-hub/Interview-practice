@@ -6,12 +6,7 @@
 
 Encapsulation means protecting data by making variables **private** and exposing them only through **controlled methods** like getters, setters, or page methods.
 
-In my framework:  
-- locators are kept private inside Page classes  
-- test classes interact only through page methods  
-- so no one can modify locators directly.
-
-This is Encapsulation in real automation design.
+In my framework, locators are kept private inside Page classes and test classes interact only through page methods, so no one can modify locators directly.
 
 ---
 
