@@ -8,7 +8,6 @@ Prepared for **SDET interviews**.
 this.price (🏠 object variable)
      =
 price (🚪 parameter)
-
 ---
 
 ## Question 1: What will be the output?
