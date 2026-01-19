@@ -42,6 +42,7 @@ for (int i = 0; i < names.size(); i++) {
 System.out.println(tableData.get("iPhone"));   // 1000
 
 ```
+---
 ## 🎤 How I Explain HashMap Table Logic in Interview
 
 - I read **two columns from the table using findElements**.  
@@ -78,6 +79,9 @@ System.out.println(tableData.get("iPhone"));   // 1000
 
 ```java
 Map<String, List<String>> data = new HashMap<>();
+```
+
+---
 
 ### 3. Where have you used this in real automation?
 
