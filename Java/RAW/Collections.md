@@ -1,3 +1,198 @@
+# 📌 Collections – SDET Interview Notes
+
+---
+
+## Q1. Explain the difference between List, Set, and Map
+
+### 1. List
+- List allows duplicates  
+- List maintains insertion order  
+- Supports index-based access  
+
+**Automation example:**  
+I store dropdown values in a List and compare them with expected values for validation.
+
+---
+
+### 2. Set
+- Set does NOT allow duplicates  
+- Set does NOT maintain insertion order (HashSet)  
+- Used when only unique values are needed  
+
+**Automation example:**  
+When I want only unique product names from search results, I store them in a Set to automatically remove duplicates.
+
+---
+
+### 3. Map
+- Map stores data in key–value pairs  
+
+**Automation example:**  
+I use Map to store table data like:  
+- column name → column value  
+- then validate UI table against expected data.
+
+---
+
+## Q2 – ArrayList vs LinkedList
+
+👉 **In your framework, when would you choose ArrayList over LinkedList?**
+
+In my framework I mostly use ArrayList (around 90%) because automation scenarios are mainly about:
+
+- storing elements from dropdowns  
+- iterating over lists  
+- validating UI data  
+- comparing expected vs actual values  
+
+**ArrayList is better for this because:**
+- Fast reading → O(1) random access  
+- Good for traversal and searching  
+
+I would use LinkedList only when:
+
+- frequent insert/delete in middle is required  
+- because LinkedList works with node references and deletion is O(1) when the node is known.
+
+---
+
+## Q3 – You stored dropdown elements in List. Why not use Set instead?
+
+I use List for dropdowns because:
+
+1. I need index-based access like options.get(2) – Set doesn’t support that.  
+2. Selenium itself returns elements as List, so List fits naturally.
+
+I would use Set only if my requirement is uniqueness, for example:
+
+- verify there are no duplicate product names  
+- remove repeated values before comparison.
+
+---
+
+## Q4 – How would you check if a dropdown has duplicate values using Set?
+
+I’ll capture dropdown elements in List,  
+extract their text into a Set,  
+and compare list size vs set size.  
+If sizes differ → duplicates exist.
+
+```java
+List<WebElement> elems = driver.findElements(By.xpath("//option"));
+
+Set<String> unique = new HashSet<>();
+
+for(WebElement e : elems) { 
+    unique.add(e.getText());   // Set stores String values, not WebElements → extract text first
+}
+
+if(elems.size() != unique.size()) {
+    System.out.println("Duplicates present");
+}
+```
+---
+# Collections – Interview Notes (Q5 to Q10)
+
+---
+
+## Q5 – How would you remove duplicates from a list while preserving order?
+
+```java
+List<String> list = Arrays.asList("apple", "mango", "apple", "banana");
+
+Set<String> set = new LinkedHashSet<>(list);
+
+List<String> result = new ArrayList<>(set);
+```
+
+**Answer:**  
+To remove duplicates while preserving order, I use **LinkedHashSet** because:
+
+- Set removes duplicates  
+- LinkedHashSet maintains insertion order  
+
+Flow:  
+List → LinkedHashSet → back to List.
+
+---
+
+## Q6 – HashSet vs LinkedHashSet vs TreeSet
+
+**HashSet**
+- Removes duplicates  
+- Does NOT maintain any order  
+
+**LinkedHashSet**
+- Removes duplicates  
+- Maintains insertion order  
+
+**TreeSet**
+- Removes duplicates  
+- Maintains **sorted (natural) order**
+
+---
+
+## Q7 – Where have you used HashMap in your automation framework?
+
+**Answer:**
+
+I used HashMap when I needed to map one value to another.  
+Example in table validation:
+
+- "Product Name" → "iPhone"  
+- "Price" → "80000"
+
+This made validation easy because I could directly fetch values using keys instead of iterating lists.
+
+---
+
+## Q8 – Hashtable vs HashMap
+
+**Answer:**
+
+Hashtable is an older version of HashMap.
+
+- Does not allow **null keys or null values**  
+- Slower compared to HashMap  
+- Legacy class
+
+In automation frameworks we mostly use **HashMap**, not Hashtable.
+
+---
+
+## Q9 – What happens if you put the same key twice in HashMap?
+
+**Answer:**
+
+- Keys CANNOT be duplicate  
+- Values CAN be duplicate  
+
+```java
+map.put("price","100");
+map.put("price","200");
+```
+
+Final value will be **200** — the first one is replaced.
+
+---
+
+## Q10 – How would you store a web table row using HashMap? Explain logic.
+
+**Answer:**
+
+To store a web table row in HashMap:
+
+- Treat each row as key–value pair  
+- Usually keep **product name as key**  
+- Keep **price as value**  
+
+Reason:
+- Product name is unique  
+- Easy to search using key  
+- Faster validation than iterating lists
+
+---
+
 # HashMap – Store Web Table Row (SDET Interview – 4+ Years)
 
 ## 🎯 Interview Question  
