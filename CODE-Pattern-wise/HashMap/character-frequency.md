@@ -1,4 +1,4 @@
-# Java Collections – Coding Question (Interview Ready)
+# Java Collections – Coding Question
 
 ## Q: Count the frequency of each character in a String
 
