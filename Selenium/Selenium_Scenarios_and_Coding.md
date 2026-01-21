@@ -296,3 +296,41 @@ FluentWait = **3 things only**
 
 ### Interview Tip
 Interviewers care more about **why** you chose FluentWait than whether you remember the exact syntax.
+
+
+---
+
+### Short Note: What is Polling in FluentWait? (Interview Friendly)
+
+#### Interview Question  
+**What do you mean by polling in FluentWait?**
+
+#### Simple Answer  
+Polling means **checking a condition again and again at fixed intervals until it becomes true or timeout happens**.
+
+---
+
+#### Example (Button Color Change Scenario)
+
+```java
+.withTimeout(Duration.ofSeconds(10))
+.pollingEvery(Duration.ofSeconds(1))
+```
+
+#### What this means (Human Explanation)
+
+- Selenium will **check the condition every 1 second**
+- It will **keep checking for a maximum of 10 seconds**
+- In this case, Selenium checks every second whether the button color has changed to green
+- If the color becomes green within 10 seconds → ✅ test passes  
+- If the color does not change even after 10 seconds → ❌ test fails due to timeout
+
+---
+
+#### Easy Way to Remember 🧠
+
+- **Timeout** → how long to wait (10 seconds)  
+- **Polling** → how often to check (every 1 second)  
+- **Condition** → what to check (color becomes green)
+
+> Polling never runs forever — **timeout always stops it**.
