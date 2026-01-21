@@ -43,7 +43,14 @@ public class CharacterFrequency {
     }
 }
 ```
-•	Why HashMap?
+## Why `toCharArray()` Is Used
+
+- A `String` is not directly iterable using a for-each loop.
+- `toCharArray()` converts the string into a `char[]`, which is iterable.
+  
+  ---
+
+• Why HashMap?
 → Fast lookup and update using key–value structure.
 	•	Time Complexity:
 → O(n), where n = length of string.
