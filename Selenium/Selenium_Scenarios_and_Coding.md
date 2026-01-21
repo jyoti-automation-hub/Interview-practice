@@ -148,3 +148,67 @@ String title = driver.getTitle();
 - `getWindowHandles()` returns **all window IDs**
 - Switch to the window that is **not equal to the parent**
 - Interviewers focus on **logic and clarity**, not full runnable code
+
+  ---
+
+  ## Round 2 – Scenario 3: iframe Handlin
+
+### Interview Scenario
+
+- Clicking **Pay Now** opens the payment form inside an **iframe**
+- Selenium cannot directly access elements inside an iframe
+- You need to:
+  - Switch to the iframe
+  - Perform payment action
+  - Switch back to the main page
+
+---
+
+### Given DOM Structure
+
+```html
+<button id="payNow">Pay Now</button>
+
+<iframe id="razorpay-frame" name="razorpay-frame">
+   <input type="text" id="cardNumber" />
+   <button id="payBtn">Pay</button>
+</iframe>
+```
+
+---
+
+### Interview Question
+How will you automate this payment flow using Selenium?
+
+---
+
+### Expected Interview Answer (Approach)
+
+- Since the element is inside an iframe, I use `driver.switchTo().frame()` to shift control to that frame before interacting with any elements inside it.  
+- Once I’m done, I use `driver.switchTo().defaultContent()` to return to the main HTML context.
+
+---
+
+### Selenium Code Logic (Interview-Level)
+
+```java
+// Click Pay Now
+driver.findElement(By.id("payNow")).click();
+
+// Switch to payment iframe using id
+driver.switchTo().frame("razorpay-frame");
+
+// Perform action inside iframe
+driver.findElement(By.id("cardNumber")).sendKeys("4111111111111111");
+driver.findElement(By.id("payBtn")).click();
+
+// Switch back to main page
+driver.switchTo().defaultContent();
+```
+
+---
+
+### Interview Tips
+- Selenium cannot access iframe elements without switching
+- Prefer switching by **id or name** if available
+- Always switch back using `defaultContent()` after iframe actions
