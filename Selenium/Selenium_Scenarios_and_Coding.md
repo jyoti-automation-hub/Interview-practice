@@ -212,3 +212,87 @@ driver.switchTo().defaultContent();
 - Selenium cannot access iframe elements without switching
 - Prefer switching by **id or name** if available
 - Always switch back using `defaultContent()` after iframe actions
+
+ ---
+
+ ## Round 2 – Scenario 4: Button Color Change using FluentWait (Apple Style)
+
+### Interview Scenario
+On product or internal dashboards:
+
+- A button initially appears **blue**
+- After some backend processing, it turns **green**
+- You need to wait for the color change and then validate it
+
+---
+
+### Given DOM Structure
+
+```html
+<button id="submitBtn" style="background-color: blue;">
+    Submit
+</button>
+```
+
+After processing:
+
+```html
+<button id="submitBtn" style="background-color: green;">
+    Submit
+</button>
+```
+
+---
+
+### Interview Question
+How will you validate that the button color changes from blue to green using Selenium?
+
+---
+
+### Selenium Code (Interview-Level – Yes, this is the scary part 😄)
+
+```java
+WebElement submitBtn = driver.findElement(By.id("submitBtn"));
+
+Wait<WebDriver> wait = new FluentWait<>(driver)
+        .withTimeout(Duration.ofSeconds(10))
+        .pollingEvery(Duration.ofSeconds(1))
+        .ignoring(Exception.class);
+
+wait.until(driver ->
+        submitBtn.getCssValue("background-color").equals("green")
+);
+```
+
+---
+
+### Human Explanation (How to Say It in Interview)
+
+> “Here the button is already visible, but its color changes after some processing.  
+> I use FluentWait so Selenium keeps checking the button’s color until it becomes green, instead of waiting blindly.”
+
+---
+
+### Why FluentWait? (Simple, Human Answer)
+
+- I **don’t use Implicit wait** because it applies everywhere and doesn’t fit dynamic behavior  
+- I **don’t prefer Explicit wait here** because I need to keep checking a changing property  
+- I **use FluentWait** because it lets me repeatedly check the button color until it changes. Because the property changes dynamically, FluentWait lets me keep checking until it updates
+
+---
+
+### Memory Tip 🧠 (DO NOT MEMORIZE CODE — Remember This Instead)
+
+FluentWait = **3 things only**
+
+- **Timeout** → how long to wait  
+  (`withTimeout(Duration.ofSeconds())`)
+- **Polling** → how often to check  
+  (`pollingEvery(Duration.ofSeconds())`)
+- **Custom Condition** → what to wait for  
+  (`wait.until(condition)`)
+
+---
+
+### Interview Tip
+Interviewers care more about **why** you chose FluentWait than whether you remember the exact syntax.
