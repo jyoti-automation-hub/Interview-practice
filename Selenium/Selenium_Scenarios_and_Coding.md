@@ -334,3 +334,75 @@ Polling means **checking a condition again and again at fixed intervals until it
 - **Condition** → what to check (color becomes green)
 
 > Polling never runs forever — **timeout always stops it**.
+
+
+---
+## Round 2 – Scenario 5: JavaScriptExecutor for Hidden / Off-Screen Element (Amazon / Apple)
+
+### Interview Scenario
+On e-commerce or product dashboards:
+
+- The element is **present in the DOM**
+- But it is:
+  - outside the visible screen, or
+  - overlapped by another element
+- Normal `click()` fails
+
+In such cases, Selenium is expected to use **JavaScriptExecutor**.
+
+---
+
+### Given DOM Structure
+
+```html
+<div style="height:1200px"></div>
+
+<button id="buyNowBtn">
+   Buy Now
+</button>
+```
+
+---
+
+### Interview Question
+How will you click the **Buy Now** button using Selenium?
+
+---
+
+### Expected Interview Answer (Approach)
+
+- When normal Selenium click does not work because the element is off-screen or blocked, I use **JavaScriptExecutor**.  
+- I scroll to the element and then click it directly using browser commands.
+
+---
+
+### Selenium Code Logic (Interview-Level)
+
+```java
+WebElement buyNowBtn = driver.findElement(By.id("buyNowBtn"));
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+
+// Scroll to the element
+js.executeScript("arguments[0].scrollIntoView(true);", buyNowBtn);
+
+// Click the element using JavaScript
+js.executeScript("arguments[0].click();", buyNowBtn);
+```
+
+---
+
+### Human Explanation (How to Say It in Interview)
+
+> “Here the element is present but Selenium is unable to click it normally.  
+> So I use JavaScriptExecutor to scroll to the element and click it directly.”
+
+---
+
+### Why JavaScriptExecutor? (Simple Reason)
+
+- Normal click may fail if the element is off-screen or blocked  
+- JavaScriptExecutor forces the browser to perform the action  
+- It is useful only when normal Selenium actions do not work
+
+---
