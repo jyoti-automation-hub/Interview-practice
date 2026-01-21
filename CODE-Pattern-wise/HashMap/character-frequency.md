@@ -11,7 +11,7 @@ Output: {b=1, a=3, n=2}
 
 ---
 
-## Approach (Interview Explanation)
+## Approach
 
 - Convert the string into characters.
 - Use a `HashMap<Character, Integer>` to store:
