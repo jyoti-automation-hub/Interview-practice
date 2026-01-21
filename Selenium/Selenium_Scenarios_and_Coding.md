@@ -151,7 +151,7 @@ String title = driver.getTitle();
 
   ---
 
-  ## Round 2 – Scenario 3: iframe Handlin
+  ## Round 2 – Scenario 3: iframe Handling
 
 ### Interview Scenario
 
