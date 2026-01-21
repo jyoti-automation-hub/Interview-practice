@@ -75,3 +75,76 @@ mobilesLink.click();
 - Do **not** click the parent menu unless explicitly required  
 - Always use **Explicit Wait** for dynamically loaded elements  
 - Interviewers focus on **approach and decision-making**, not full runnable code
+
+---
+
+## Round 2 – Scenario 2: New Tab / Window Handling 
+
+### Interview Scenario
+On e-commerce websites like Amazon or Flipkart:
+
+- Clicking a product from the listing page opens the product details in a **new tab**
+- Selenium does **not** automatically switch to the new tab
+- You need to:
+  - Switch to the new tab
+  - Verify the product page title
+
+---
+
+### Given DOM Structure
+
+```html
+<div class="product-list">
+   <div class="product-card">
+       <a href="/iphone-15" target="_blank" class="product-link">
+           iPhone 15
+       </a>
+   </div>
+</div>
+```
+
+---
+
+### Interview Question
+How will you handle switching to the new tab and verify the product page?
+
+---
+
+### Expected Interview Answer (Approach)
+
+- I will store the parent window handle before clicking the product.  
+- After clicking, I will loop through all window handles and switch to the window that is **not equal to the parent**, then verify the title.
+
+---
+
+### Selenium Code Logic (Interview-Level)
+
+```java
+// Store parent window
+String parentWindow = driver.getWindowHandle();
+
+// Click product link
+driver.findElement(By.linkText("iPhone 15")).click();
+
+// Get all open windows
+Set<String> allWindows = driver.getWindowHandles();
+
+// Switch to new (child) window
+for (String windowId : allWindows) {
+    if (!windowId.equals(parentWindow)) {
+        driver.switchTo().window(windowId);
+        break;
+    }
+}
+
+// Verify product page title
+String title = driver.getTitle();
+```
+
+---
+
+### Interview Tips
+- Always store **parent window handle before clicking**
+- `getWindowHandles()` returns **all window IDs**
+- Switch to the window that is **not equal to the parent**
+- Interviewers focus on **logic and clarity**, not full runnable code
