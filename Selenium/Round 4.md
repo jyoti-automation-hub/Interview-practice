@@ -55,6 +55,44 @@ I don’t ignore automation blindly. I recheck the failure, share evidence like 
 I don’t try to increase coverage blindly. I start by automating high-impact and high-priority flows such as core user journeys. This improves coverage while keeping the automation stable and maintainable.
 
 ---
+# 🔵 Selenium Interview – Round 4 (Reality & Decision Making)
+
+This file covers **real-world judgment questions** asked in product-based company interviews (Amazon, Apple, Flipkart, Myntra) for SDET / Automation roles.
+
+The focus is on **communication, ownership, and trust-building**, not Selenium syntax.
+
+---
+
+## Q7. Developers say automation failures are “false alarms.” How do you handle this situation?
+
+**Answer:**
+
+I don’t ignore automation failures, even if developers call them false alarms. I first understand why the test failed—whether it’s due to a locator change, environment issue, or timeout problem. If the flow works fine manually, I fix the automation. If the issue is real, I share clear evidence like logs or screenshots instead of arguing. Over time, this approach helps build trust between automation and development teams.
+
+**Key mindset:**
+Automation failures should be verified and explained, not ignored or argued over.
+
+---
+
+## Q8. You joined a new team and the automation suite is unstable. Where do you start?
+
+**Answer:**
+
+When I join a new team and find the automation suite unstable, I first try to understand which tests fail frequently and why. I focus on stabilizing critical and high-impact tests before adding new ones. I also discuss with the team to understand past issues and existing practices, so fixes are aligned with the project context.
+
+**Key mindset:**
+Stabilize first, then scale.
+
+---
+
+## 🔑 Interview Takeaway
+
+- Automation failures should be **investigated, not dismissed**
+- Stability is more important than coverage in the beginning
+- Clear communication builds long-term trust
+
+Automation raises signals — humans analyze and decide.
+
 
 ## 🔑 Key Interview Mindset
 
