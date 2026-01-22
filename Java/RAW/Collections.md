@@ -295,3 +295,93 @@ I used HashMap in these real scenarios:
   Product → amount mapping to verify after add/remove actions.
 
 This made validations faster and cleaner compared to iterating lists multiple times.
+
+
+---
+
+# 📌 Collections – TreeSet & Vector (SDET Interview Notes)
+
+---
+
+## 🌳 TreeSet
+
+### What is TreeSet?
+- TreeSet is a class that implements the **Set** interface
+- It does **NOT allow duplicate elements**
+- It **automatically sorts elements** in natural (ascending) order
+
+---
+
+### Properties of TreeSet
+- No duplicates
+- Maintains **sorted order**
+- Slower than HashSet / LinkedHashSet because sorting is involved
+
+---
+
+### When would you use TreeSet in Automation?
+TreeSet is used **only when sorting is required**.
+
+**Example scenarios:**
+- Verify dropdown values are sorted alphabetically
+- Validate sorted product names on UI
+- Check sorted report values
+
+---
+
+### Why TreeSet is rarely used in Automation Frameworks?
+- Sorting adds performance overhead
+- Most automation scenarios need:
+  - uniqueness → LinkedHashSet
+  - fast lookup → HashSet
+- Sorting is usually validated once, not stored repeatedly
+
+---
+
+### Interview One-Liner (TreeSet)
+> TreeSet removes duplicates and keeps elements sorted, but it is slower, so it’s used only when sorting is required.
+
+---
+
+## 📦 Vector
+
+### What is Vector?
+- Vector is a **legacy implementation of List**
+- It is **synchronized (thread-safe) by default**
+- Introduced before ArrayList
+
+---
+
+### Properties of Vector
+- Allows duplicates
+- Maintains insertion order
+- Thread-safe (synchronized)
+- Slower than ArrayList due to synchronization
+
+---
+
+### Why Vector is NOT used in Automation Frameworks?
+- Automation frameworks mostly run in **single-threaded flows**
+- Thread safety is not required in most test executions
+- Synchronization makes Vector slower
+- **ArrayList is faster and preferred**
+
+---
+
+### Interview One-Liner (Vector)
+> Vector is a legacy, synchronized List implementation. In modern automation frameworks, we prefer ArrayList because it is faster.
+
+---
+
+## ✅ Summary (Interview Focus)
+
+| Collection | Duplicates | Order | Automation Usage |
+|----------|------------|-------|------------------|
+| TreeSet | ❌ | Sorted | Rare (sorting cases) |
+| Vector | ✅ | Insertion | ❌ Not used |
+
+---
+
+💡 Interview Tip:
+For SDET roles (4+ years), **know Vector only conceptually**.  
+You will almost never be asked to write code using Vector.
