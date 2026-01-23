@@ -80,6 +80,18 @@ class Bike extends Vehicle {
         System.out.println("Bike starts with kick");
     }
 }
+
+Vehicle v = new Bike();        1️⃣ Parent Reference → Child Object (Polymorphism)
+v.fuel();     // allowed
+v.start();    // allowed
+
+or
+
+
+Bike c = new Bike();             2️⃣ Child Reference → Child Object
+c.fuel();     // allowed
+c.start();    // allowed
+
 ```
 
 Child didn’t write `fuel()` but still used it because it was already implemented.
