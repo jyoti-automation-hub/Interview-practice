@@ -145,7 +145,29 @@ Vehicle v = new Vehicle();   // NOT allowed
 
 ### Trap C – Concrete Methods Inherited
 
-Child can directly use implemented methods from abstract class without rewriting.
+1. Child can directly use implemented methods from abstract class without rewriting.
+2. A child class CAN modify (override) a concrete method of an abstract class
+
+```java
+abstract class Vehicle {
+    abstract void start();
+
+    void fuel() {
+        System.out.println("Fueling vehicle");
+    }
+}
+
+class Car extends Vehicle {
+    void start() {
+        System.out.println("Car starts");
+    }
+
+    // overriding concrete method → ALLOWED
+    void fuel() {
+        System.out.println("Fueling car");
+    }
+}
+```
 
 ---
 
