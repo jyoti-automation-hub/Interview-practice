@@ -42,7 +42,22 @@ class Car extends Vehicle {
         System.out.println("Car starts with key");
     }
 }
+
+
+Vehicle v = new Car();        1️⃣ Parent Reference → Child Object (Polymorphism)
+v.fuel();     // allowed
+v.start();    // allowed
+
+or
+
+
+Car c = new Car();             2️⃣ Child Reference → Child Object
+c.fuel();     // allowed
+c.start();    // allowed
+
+
 ```
+Vehicle v = new Vehicle();   // **NOT allowed**
 
 ---
 
