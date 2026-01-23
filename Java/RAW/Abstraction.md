@@ -1,7 +1,9 @@
 # **Abstraction – Interview Notes (SDET Focused)**
 
 ---
-
+Objects are created for classes, not for methods.
+One object can access multiple methods.
+---
 ## **Q1. What is Abstraction?**
 
 **Answer :**  
