@@ -142,4 +142,16 @@ List<String> upperNames = names.stream()
                                .map(name -> name.toUpperCase())
                                .collect(Collectors.toList());
 ```
+---
 
+What is collect() in Streams? 
+
+When you use streams, Java processes data step by step, but a stream itself is not a real data structure.
+
+👉 collect() is used when you want the final result back in a usable form (like a List).
+
+---
+
+.collect(Collectors.toList())
+
+---
