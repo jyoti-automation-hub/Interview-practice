@@ -78,4 +78,68 @@ List<String> validProducts =
 
 ## 🎤 Interview One-Liner (Product Company Ready)
 
-> “I use Java Streams `filter()` to remove unavailable or empty prices from search results and validate only real product prices.”
+> “I use Java Streams `filter()` to remove unavailable or empty prices from search results and validate only real product prices.
+
+
+---
+# Java Streams – map() Method (Interview-Focused Notes)
+
+---
+
+## What is map()?
+
+**map() is used to transform data in a stream.**  
+It converts each element into another form without removing anything.
+
+---
+
+## One-Line Interview Definition
+
+**“map() takes one value and converts it into another value.”**
+
+---
+
+## Difference between `filter()` and `map()` (Important)
+
+### `filter()`
+- Used to **remove unwanted elements**
+- Works on a **condition (true / false)**
+- If condition is **true** → element stays
+- If condition is **false** → element is removed
+- **Size of data may reduce**
+
+**Example use cases:**
+- Remove empty values  
+- Remove disabled items  
+- Remove invalid prices  
+
+---
+
+### `map()`
+- Used to **transform / convert data**
+- Changes **value or type** of each element
+- Does **not remove elements**
+- **Size of data remains the same**
+
+**Example use cases:**
+- WebElement → String  
+- String → Integer  
+- lowercase → uppercase  
+
+---
+
+### Interview One-Liner
+**`filter()` cleans the data, `map()` transforms the data.**
+
+---
+
+## Simple Example (Core Java)
+
+```java
+List<String> names = List.of("iphone", "mac", "watch");
+
+List<String> upperNames = names.stream()
+                               .map(name -> name.toUpperCase())
+                               .collect(Collectors.toList());
+```
+
