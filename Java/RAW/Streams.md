@@ -1,4 +1,4 @@
-# Java Streams – Interview-Ready Notes (SDET / Product Companies)
+# Java Streams 
 
 ---
 
