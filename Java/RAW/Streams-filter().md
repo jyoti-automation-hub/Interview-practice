@@ -2,6 +2,7 @@
 
 ---
 
+I use filter() to remove invalid or unwanted UI data before performing assertions.
 
 ---
 
@@ -19,9 +20,57 @@ List<String> validProducts =
 ```
   ---
 
+  ## Line-by-Line Explanation (Very Simple & Human) — Java Streams `filter()` + `collect()`
+
+1. **`list.stream()`**  
+   Converts the `List` into a **Stream** so Java can process elements one by one in a pipeline instead of using loops.
+
+2. **`filter(...)`**  
+   `filter` is used to **keep or remove elements** based on a condition.  
+   - If condition returns **true** → element is kept  
+   - If condition returns **false** → element is removed  
+
+3. **`p`**  
+   `p` represents **one element at a time** coming from the stream.  
+   Example values of `p` during execution:
+   - `"iPhone"`
+   - `"Mac"`
+   - `" "` (space)
+   - `""` (empty string)
+
+4. **`->` (Lambda arrow)**  
+   Means **“for each element `p`, apply this condition”**.  
+   It connects the input (`p`) to the logic after it.
+
+5. **`p.trim()`**  
+   Removes **leading and trailing spaces** from the string.  
+   Examples:
+   - `" "` → `""`
+   - `" iPhone "` → `"iPhone"`
+
+6. **`isEmpty()`**  
+   Checks whether the string is empty (`""`).  
+   - Returns `true` if empty  
+   - Returns `false` if not empty  
+
+7. **`!` (NOT operator)**  
+   Reverses the result:
+   - `isEmpty() == true` → `!true` → `false` (remove)
+   - `isEmpty() == false` → `!false` → `true` (keep)
+
+   ✅ Result: **only non-empty values are kept**
+
+8. **`collect(Collectors.toList())`**  
+   Streams cannot be reused directly.  
+   `collect()`:
+   - Takes all remaining elements from the stream
+   - Converts them back into a **List**
+   - Stores the final clean data in the result variable
+  
+---
+
 ## ❓ Why `filter()` Is Used Here
 
-- I use filter() to remove invalid or unwanted UI data before performing assertions.
 - UI data is often **not clean** (mix of valid, empty, or unavailable values)
 - `filter()` removes **unwanted entries before validation**
 
