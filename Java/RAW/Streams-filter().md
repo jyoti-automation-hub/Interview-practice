@@ -82,11 +82,9 @@ Assert.assertFalse(validPrices.isEmpty(), "No valid prices found");
 
 ## ❓ Why `filter()` Is Used Here
 
+- I use filter() to remove invalid or unwanted UI data before performing assertions.
 - UI data is often **not clean** (mix of valid, empty, or unavailable values)
 - `filter()` removes **unwanted entries before validation**
-- Helps **prevent false test failures**
-- Replaces **complex nested loops** with clean, readable logic
-- Makes validations **more reliable and maintainable** in automation frameworks
 
 ---
 
