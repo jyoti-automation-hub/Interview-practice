@@ -1,4 +1,4 @@
-# 🔢 Java Array Output Questions (Interview Focused)
+# 🔢 Java Array Output Questions 
 
 ---
 
