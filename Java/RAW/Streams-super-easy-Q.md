@@ -60,7 +60,6 @@ Stream.iterate(1, n -> n + 1)
 Streams in Java can be created from **collections, arrays, Stream.of(), and Stream.iterate()**, and processed using operations like `filter`, `map`, and `forEach`.
 
 ---
-# Java Streams – Filter Even Numbers from List (Interview Ready)
 
 ## Question  
 **2. Filter even numbers from a list using Java Streams**
@@ -98,7 +97,15 @@ public class FilterEvenNumbers {
 ```
 [2, 4, 6, 8, 10]
 ```
+---
+## Explanation – Filter Even Numbers using Java Streams
 
+- First, we convert the list into a **stream** so that we can perform stream operations on it.  
+- Then we apply the `filter()` **intermediate operation**, which accepts a **Predicate** (a boolean-returning condition).  
+- For each element in the stream, the predicate checks whether the number is even.  
+- If the condition returns `true`, the element is allowed to pass through the stream; otherwise, it is discarded.  
+- When the **terminal operation** `collect()` is invoked, the entire stream pipeline is triggered and executed.  
+- Finally, we use `Collectors.toList()` to collect the filtered elements back into a list and print the result.
 ---
 
 ## Core Idea (Interview Explanation)
