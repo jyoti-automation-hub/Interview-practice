@@ -2,8 +2,6 @@
 
 ## Question  
 **1. How do you create Streams in Java?**
-
-This document shows **four standard ways to create streams** with **simple operations**.
 ---
 
 ## 1️⃣ Create Stream from a Collection
