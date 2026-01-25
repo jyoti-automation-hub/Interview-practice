@@ -52,8 +52,36 @@ public class PalindromeCheck {
 }
 ```
 
+
 ---
 
+Another appoach
+
+```java
+public class PalindromeCheck {
+
+    public static boolean isPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                return false;   // mismatch → not a palindrome
+            }
+            left++;
+            right--;
+        }
+        return true; // all characters matched
+    }
+
+    public static void main(String[] args) {
+        String input = "madam";
+        System.out.println(isPalindrome(input)); // true
+    }
+}
+```
+
+---
 ## Explanation:
 
 - Two pointers are used:
