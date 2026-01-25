@@ -58,3 +58,61 @@ Stream.iterate(1, n -> n + 1)
 
 ## 🔑 Interview One-Liner
 Streams in Java can be created from **collections, arrays, Stream.of(), and Stream.iterate()**, and processed using operations like `filter`, `map`, and `forEach`.
+
+---
+# Java Streams – Filter Even Numbers from List (Interview Ready)
+
+## Question  
+**2. Filter even numbers from a list using Java Streams**
+
+---
+
+## Problem Statement  
+Given a list of integers, filter out only the **even numbers** using Java Streams.
+
+---
+
+## Code Implementation
+```java
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class FilterEvenNumbers {
+
+    public static void main(String[] args) {
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        List<Integer> evenNumbers = numbers.stream()
+                                           .filter(n -> n % 2 == 0)
+                                           .collect(Collectors.toList());
+
+        System.out.println(evenNumbers);
+    }
+}
+```
+
+---
+
+## Output
+```
+[2, 4, 6, 8, 10]
+```
+
+---
+
+## Core Idea (Interview Explanation)
+- Convert the list into a **stream**
+- Use `filter()` to keep only numbers divisible by 2
+- Collect the result back into a list using `Collectors.toList()`
+
+---
+
+## Time & Space Complexity
+- **Time Complexity:** O(n)  
+- **Space Complexity:** O(n)
+
+---
+
+## One-Line Interview Answer
+We use `stream()` to process elements, `filter()` to select even numbers, and `collect()` to store the result back into a list.
