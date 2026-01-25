@@ -114,5 +114,49 @@ public class FilterEvenNumbers {
 
 ---
 
+## Question  
+**3. Convert numbers in a list to their squares using Java Streams**
+
+---
+
+## Code Implementation
+```java
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class SquareNumbers {
+
+    public static void main(String[] args) {
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        // Expected Output: [1, 4, 9, 16, 25]
+
+        List<Integer> result = numbers.stream()
+                                      .map(n -> n * n)
+                                      .collect(Collectors.toList());
+
+        System.out.println(result);
+    }
+}
+```
+
+---
+
+## Explanation
+- First, we convert the list into a **stream** to enable stream processing.
+- Then we apply the `map()` **intermediate operation**, which is used for **transformation**.
+- For each element, the lambda expression `n -> n * n` converts the number into its square.
+- The `map()` operation returns a new stream containing transformed values.
+- When the **terminal operation** `collect()` is called, the stream pipeline is executed.
+- Finally, `Collectors.toList()` collects the squared values into a list.
+
+---
+
+## Time & Space Complexity
+- **Time Complexity:** O(n)  
+- **Space Complexity:** O(n)
+
+---
+
 ## One-Line Interview Answer
-We use `stream()` to process elements, `filter()` to select even numbers, and `collect()` to store the result back into a list.
+We use `map()` to transform each element into its square and `collect()` to store the result back into a list.
