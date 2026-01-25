@@ -108,13 +108,6 @@ public class FilterEvenNumbers {
 - Finally, we use `Collectors.toList()` to collect the filtered elements back into a list and print the result.
 ---
 
-## Core Idea (Interview Explanation)
-- Convert the list into a **stream**
-- Use `filter()` to keep only numbers divisible by 2
-- Collect the result back into a list using `Collectors.toList()`
-
----
-
 ## Time & Space Complexity
 - **Time Complexity:** O(n)  
 - **Space Complexity:** O(n)
