@@ -79,3 +79,31 @@ public class ReverseEachWord {
 - **trim()**  
   Removes the extra space added at the end while building the result.
 
+---
+# 
+```java
+public class ReverseEachWord {
+
+    public static void main(String[] args) {
+        String sentence = "Java is fun";
+        System.out.println(reverseWords(sentence));
+    }
+
+    static String reverseWords(String sentence) {
+        String[] words = sentence.split(" ");
+        String result = "";
+
+        for (String word : words) {
+            String reversed = "";
+            for (int i = word.length() - 1; i >= 0; i--) {
+                reversed = reversed + word.charAt(i);
+            }
+            result = result + reversed + " ";
+        }
+
+        return result.trim();
+    }
+}
+
+```
+---
