@@ -1,4 +1,4 @@
-# Lambda – Interview Questions
+# Lambda –  Questions
 
 ---
 
@@ -81,7 +81,7 @@ Here:
 
 ---
 
-### Key Interview Lines
+### Key Lines
 
 - The Lambda receives **WebDriver as input**  
 - It returns the **boolean result** of `isDisplayed()`  
@@ -265,7 +265,7 @@ Assert.assertEquals(actual, expected);
 
 ---
 
-## Perfect Interview Explanation
+##  Explanation
 
 > In dropdown validation, instead of writing a manual loop to extract text from each WebElement, I used Lambda with streams:  
 > `options.stream().map(e -> e.getText()).collect(toList())`.  
