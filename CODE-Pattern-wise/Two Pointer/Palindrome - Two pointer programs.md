@@ -1,6 +1,6 @@
-# Palindrome Check Using Two Pointers (Java)
+# Palindrome Check Using Two Pointers 
 
-## Interview Question
+##  Question
 Check whether a given string is a palindrome using the **two-pointer technique**.
 
 Constraints:
