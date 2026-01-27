@@ -1,6 +1,7 @@
 ## Two Pointers – Reverse an Array in place
 ---
 
+```java
 public class ReverseArray {
 
  public static void reverse(int[] arr) {
@@ -26,7 +27,7 @@ public class ReverseArray {
         }
     }
 }
-
+```
 ---
 Problem
 
