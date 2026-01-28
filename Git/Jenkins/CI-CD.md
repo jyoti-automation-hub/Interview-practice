@@ -1,4 +1,4 @@
-# CI/CD Interview Notes (SDET – Product Company Level)
+# CI/CD Notes (SDET – Product Company Level)
 
 ---
 
