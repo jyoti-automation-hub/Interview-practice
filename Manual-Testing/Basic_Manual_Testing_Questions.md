@@ -3,13 +3,12 @@
 ---
 
 ## **1. Explain What You Tested in Your Project**
+---
+“I worked on a customer-facing web platform that allowed users to purchase products and complete transactions online.
+I was responsible for both manual and automation testing of business-critical features.
+I tested end-to-end user flows, including ordering, validations, payments, and return/refund scenarios.
+I also automated key regression flows using Selenium with Java to ensure stability across releases.”
 
-ex- sample answer- I worked on **Service Repair platform** where customers can purchase genuine parts, rent tools, and perform device repair on their own.  
-My role was **Manual and Automation testing** for:
-- Ordering flow  
-- Compatibility validation  
-- Payment processing  
-- Return & refund flows  
 
 ### Follow-up: *What automation did you do?*
 
