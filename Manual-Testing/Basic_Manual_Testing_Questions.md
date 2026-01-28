@@ -4,7 +4,7 @@
 
 ## **1. Explain What You Tested in Your Project**
 ---
-I worked on a customer-facing web platform that allowed users to purchase products and complete transactions online.
+I worked on a customer-facing web platform that allowed users to purchase AC plans and complete transactions online.
 I was responsible for both manual and automation testing of business-critical features.
 I tested end-to-end user flows, including ordering, validations, payments, and return/refund scenarios.
 I also automated key regression flows using Selenium with Java to ensure stability across releases.
