@@ -24,21 +24,9 @@ I automated critical regression flows like:
 
 ## **2. Tell Me About Your Day-to-Day Activities**
 
-My day-to-day activities were mainly driven by the planned test cases for the release.  
-First, I focused on **P1 and high-priority test cases** that cover the end-to-end business flow.
-
-### I validated critical scenarios like:
-- User can place a repair order successfully  
-- Parts and tools can be added to the cart  
-- Pricing is consistent across all pages  
-- User is able to create account and proceed to checkout  
-
-If I found any discrepancy:
-- I logged defects with proper evidence, screenshots, and logs  
-- Tracked defects release-wise in our tracking sheet  
-- Followed up with dev until closure  
-
-Along with functional testing, I performed **regression after every build** to ensure existing flows were not impacted.
+On a day-to-day basis, I’m involved in validating features through test execution and regression testing.
+I identify, report, and track defects and verify them once fixes are provided.
+Alongside this, I continuously work on automation by adding new coverage and maintaining the framework so it stays stable and scalable.
 
 ---
 
