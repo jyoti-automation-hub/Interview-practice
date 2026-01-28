@@ -1,4 +1,4 @@
-# 🔵 Selenium Interview – Round 4 (Reality & Decision Making)
+# 🔵 Selenium  – Round 4 (Reality & Decision Making)
 
 This section covers **real-world decision-making questions** asked in product-based company interviews (Amazon, Apple, Flipkart, Myntra) for SDET / Automation roles.
 
