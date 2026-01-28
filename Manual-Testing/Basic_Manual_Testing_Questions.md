@@ -194,7 +194,7 @@ In our project, defect life cycle starts when I log a defect and assign priority
 Once fixed, the defect comes back to me as the originator.  
 I retest it 2–3 times, add evidence and comments, and if everything is fine, I close the defect.
 
-If the issue is still there, I reopen it and assign back to dev.
+If the issue is still there, I re-test it and assign back to dev.
 
 **Flow:**  
 Open → Assigned → Fixed → Retest → Closed / Reopen
