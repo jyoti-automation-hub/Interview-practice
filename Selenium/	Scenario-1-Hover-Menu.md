@@ -91,3 +91,48 @@ mobiles.click();
   → Ensures the submenu option is fully loaded and ready before clicking
 
 👉 **Waiting for submenu = waiting for the Mobiles element to become clickable**
+
+---
+## 🔁 Scenario 1 – Follow-up Interview Questions & Answers
+
+### ❓ Follow-up 1: What if the submenu takes longer to load?
+
+**Answer:**  
+I use **Explicit Wait** to wait until the submenu option becomes clickable. Since hover menus load dynamically, explicit wait ensures Selenium waits only as long as required instead of using fixed delays.
+
+---
+
+### ❓ Follow-up 2: What if hover fails sometimes in CI (Jenkins)?
+
+**Answer:**  
+If hover fails in CI, I first check locator stability and synchronization issues. I prefer hovering on a stable parent element and ensuring proper waits. I avoid blind retries and use them only if the issue is environment-related, not test logic related.
+
+---
+
+### ❓ Follow-up 3: What if the submenu is present in DOM but not visible?
+
+**Answer:**  
+In such cases, I wait for the element to become **clickable**, which ensures the element is present, visible, and enabled before interaction. This avoids interacting with hidden elements.
+
+---
+
+### ❓ Follow-up 4: Why didn’t you use Implicit Wait here?
+
+**Answer:**  
+I avoid implicit wait because it applies globally and can cause unexpected delays. For dynamic elements like hover menus, **Explicit Wait** is more reliable since it waits for a specific condition.
+
+---
+
+### ❓ Follow-up 5: How would you make this logic reusable in a framework?
+
+**Answer:**  
+I would place the hover and click logic inside a **Page Object class** and keep wait utilities in a **base or utility class**. This improves reusability, readability, and maintenance when UI changes.
+
+---
+
+### 🔑 Interview Tip
+
+- Code only the **main happy path**
+- Handle edge cases and follow-ups through **clear explanations**
+- Interviewers focus more on **reasoning than extra code**
+
