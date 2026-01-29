@@ -1,10 +1,10 @@
-# Selenium Scenario-Based Interview Questions
+# Selenium Scenario-Based Questions
 
 ---
 
 ## Round 2 – Scenario 1: Hover, Wait, and Click Submenu (Amazon / Flipkart)
 
-### Interview Scenario
+### Scenario
 On an e-commerce website like Amazon or Flipkart:
 
 - The category menu is hidden by default  
@@ -34,19 +34,19 @@ You need to automate navigation from **Electronics → Mobiles / iPhone**.
 
 ---
 
-### Interview Question
+### Question
 How will you automate this scenario using Selenium?
 
 ---
 
-### Expected Interview Answer (Approach)
+### Expected Answer (Approach)
 
 - Since the submenu appears only after hover, I will use the **Actions class**.  
 - After hovering, I will apply an **explicit wait** for the submenu element and then click it.
 
 ---
 
-### Selenium Code (Interview-Level Logic)
+### Selenium Code (Logic)
 
 ```java
 Actions actions = new Actions(driver);
@@ -71,7 +71,7 @@ mobilesLink.click();
 
 ---
 
-### Interview Tips
+### Tips
 - Do **not** click the parent menu unless explicitly required  
 - Always use **Explicit Wait** for dynamically loaded elements  
 - Interviewers focus on **approach and decision-making**, not full runnable code
@@ -80,7 +80,7 @@ mobilesLink.click();
 
 ## Round 2 – Scenario 2: New Tab / Window Handling 
 
-### Interview Scenario
+### Scenario
 On e-commerce websites like Amazon or Flipkart:
 
 - Clicking a product from the listing page opens the product details in a **new tab**
@@ -105,19 +105,19 @@ On e-commerce websites like Amazon or Flipkart:
 
 ---
 
-### Interview Question
+### Question
 How will you handle switching to the new tab and verify the product page?
 
 ---
 
-### Expected Interview Answer (Approach)
+### Expected Answer (Approach)
 
 - I will store the parent window handle before clicking the product.  
 - After clicking, I will loop through all window handles and switch to the window that is **not equal to the parent**, then verify the title.
 
 ---
 
-### Selenium Code Logic (Interview-Level)
+### Selenium Code Logic
 
 ```java
 // Store parent window
@@ -143,7 +143,7 @@ String title = driver.getTitle();
 
 ---
 
-### Interview Tips
+### Tips
 - Always store **parent window handle before clicking**
 - `getWindowHandles()` returns **all window IDs**
 - Switch to the window that is **not equal to the parent**
@@ -153,7 +153,7 @@ String title = driver.getTitle();
 
   ## Round 2 – Scenario 3: iframe Handling
 
-### Interview Scenario
+### Scenario
 
 - Clicking **Pay Now** opens the payment form inside an **iframe**
 - Selenium cannot directly access elements inside an iframe
@@ -177,19 +177,19 @@ String title = driver.getTitle();
 
 ---
 
-### Interview Question
+### Question
 How will you automate this payment flow using Selenium?
 
 ---
 
-### Expected Interview Answer (Approach)
+### Expected Answer (Approach)
 
 - Since the element is inside an iframe, I use `driver.switchTo().frame()` to shift control to that frame before interacting with any elements inside it.  
 - Once I’m done, I use `driver.switchTo().defaultContent()` to return to the main HTML context.
 
 ---
 
-### Selenium Code Logic (Interview-Level)
+### Selenium Code Logic
 
 ```java
 // Click Pay Now
@@ -208,7 +208,7 @@ driver.switchTo().defaultContent();
 
 ---
 
-### Interview Tips
+### Tips
 - Selenium cannot access iframe elements without switching
 - Prefer switching by **id or name** if available
 - Always switch back using `defaultContent()` after iframe actions
@@ -217,7 +217,7 @@ driver.switchTo().defaultContent();
 
  ## Round 2 – Scenario 4: Button Color Change using FluentWait (Apple Style)
 
-### Interview Scenario
+### Scenario
 On product or internal dashboards:
 
 - A button initially appears **blue**
@@ -244,7 +244,7 @@ After processing:
 
 ---
 
-### Interview Question
+### Question
 How will you validate that the button color changes from blue to green using Selenium?
 
 ---
@@ -302,7 +302,7 @@ Interviewers care more about **why** you chose FluentWait than whether you remem
 
 ### Short Note: What is Polling in FluentWait? (Interview Friendly)
 
-#### Interview Question  
+#### Question  
 **What do you mean by polling in FluentWait?**
 
 #### Simple Answer  
