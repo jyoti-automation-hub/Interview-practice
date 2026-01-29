@@ -1,4 +1,4 @@
-# Selenium Interview Questions – Core Concepts
+# Selenium Questions – Core Concepts
 
 ---
 
@@ -49,7 +49,7 @@
 
 **Answer:**
 - Implicit wait is global and applies to all elements.  
-- Explicit wait is condition-based and only waits for a specific element.  
+- Explicit wait waits for a specific condition like element visible or clickable.  
 - In real automation, I mostly use explicit wait because it is more reliable.
 
 ---
