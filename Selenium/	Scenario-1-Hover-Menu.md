@@ -69,3 +69,24 @@ WebElement mobiles = wait.until(
         )
 );
 mobiles.click();
+
+---
+
+### 🧠 Explanation (How to Explain in Interview)
+
+- `electronicsMenu`  
+  → Locates the category menu element on which hover action is required
+
+- `Actions actions = new Actions(driver)`  
+  → Used to perform mouse interactions such as hover, click-and-hold, etc.
+
+- `moveToElement(electronicsMenu).perform()`  
+  → Hovers the mouse over the Electronics menu, which triggers the submenu
+
+- `WebDriverWait`  
+  → Used for dynamic waiting instead of fixed delays like `Thread.sleep`
+
+- `elementToBeClickable(Mobiles)`  
+  → Ensures the submenu option is fully loaded and ready before clicking
+
+👉 **Waiting for submenu = waiting for the Mobiles element to become clickable**
