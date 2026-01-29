@@ -70,6 +70,7 @@ WebElement mobiles = wait.until(
 );
 mobiles.click();
 
+```
 ---
 
 ### 🧠 Explanation (How to Explain in Interview)
