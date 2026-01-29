@@ -1,4 +1,4 @@
-# 🔵 Scenario 7 – Dropdown Handling (Standard `<select>`)
+# 🔵 Scenario 6- Dropdown Handling (Standard `<select>`)
 
 ## 🎯 Interview Scenario
 
