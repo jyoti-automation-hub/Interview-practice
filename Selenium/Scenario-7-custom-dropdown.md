@@ -19,6 +19,7 @@
 ## This is NOT a <select> tag → so Select class will NOT work.
 
 ```java
+
 // Step 1 — Click the dropdown
 driver.findElement(By.xpath("//div[@class='dropdown']")).click();
 
@@ -33,7 +34,7 @@ for (WebElement el : items) {
         break;
     }
 }
+
 ```
----
 
 
