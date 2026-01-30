@@ -1,4 +1,4 @@
-## 🎯 CSS Selectors – Interview-Ready Notes (Q1, Q2, Q4)
+## 🎯 CSS Selectors 
 
 ---
 
@@ -34,3 +34,21 @@
 - Selects all elements whose class attribute is loginButton.
 
 ---
+## ✅ Question 3 — Multiple Classes (CSS Selector)
+
+### 📜 Rule
+- When an element has **multiple classes**, they are written **space-separated** in HTML.
+- In CSS selector:
+  - Use **dot (`.`) before each class**
+  - **No space** between class names in the selector
+
+---
+
+### 🌐 DOM Structure
+```html
+<div class="card highlighted">Product Card</div>
+```
+---
+
+- .card.highlighted
+- Selects the <div> element only if BOTH classes card AND highlighted are present.
