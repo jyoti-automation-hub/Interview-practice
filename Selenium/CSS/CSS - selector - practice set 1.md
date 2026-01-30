@@ -143,10 +143,13 @@ tag[attribute*='value']
  -  alue → stable part of the attribute
 
 ### 🌐 Example DOM
-
+```html
 <input id="search-input-987">
+```
 ---
+
 input[id*='search']
+
 ---
 
 
