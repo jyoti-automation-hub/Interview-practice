@@ -52,3 +52,29 @@
 
 - .card.highlighted
 - Selects the <div> element only if BOTH classes card AND highlighted are present.
+
+---
+
+## ✅ Question 3 — Multiple Classes (CSS Selector)
+
+### 📜 Rule
+- When an element has **multiple classes**, they are written **space-separated** in HTML.
+- In CSS selector:
+  - Use **dot (`.`) before each class**
+  - **No space** between class names in the selector
+
+---
+
+### 🌐 DOM Structure
+```html
+<div class="card highlighted">Product Card</div>
+```
+---
+- .card.highlighted
+
+- When an element has multiple classes, I chain them using dots without spaces.
+.card.highlighted means the element must have both classes, not just one.
+
+---
+
+
