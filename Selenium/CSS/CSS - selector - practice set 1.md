@@ -129,8 +129,9 @@ span[id$='error']           /* ends with */
 ---
 
 ## ✅ Q5 — CSS Attribute Contains Selector (`*=`)
-
+---
 ### 📜 Rule / Format
+
 ```css
 tag[attribute*='value']
 ```
