@@ -105,11 +105,32 @@ They are written **inside the opening tag** in the format:
 	- type="text"
   - id="username"
 
+---
+
+## 🧠 Easy Memory Rule — CSS Attribute Selectors
+
+### 🔑 Symbols You Must Remember
+
+| Symbol | Meaning   | When to Use |
+|------|-------------|-------------------------------------------------|
+| `=`  | Exact match | When attribute value is fixed                   |
+| `*=` | Contains    | When attribute is dynamic but has a stable part |
+| `^=` | Starts with | When attribute always starts with same prefix   |
+| `$=` | Ends with.  | When attribute always ends with same suffix     |
+
+---
+
+### 📌 Quick Examples
+
+```css
+input[id='username']        /* exact match */
+input[id*='search']         /* contains */
+div[id^='prod']             /* starts with */
+span[id$='error']           /* ends with */
 
 
 
-
-
+---
 
 
 
