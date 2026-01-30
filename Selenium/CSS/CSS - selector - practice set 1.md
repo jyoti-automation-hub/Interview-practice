@@ -125,7 +125,7 @@ input[id='username']        /* exact match */
 input[id*='search']         /* contains */
 div[id^='prod']             /* starts with */
 span[id$='error']           /* ends with */
-
+```
 ---
 
 ## ✅ Q5 — CSS Attribute Contains Selector (`*=`)
