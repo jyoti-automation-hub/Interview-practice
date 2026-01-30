@@ -1,4 +1,4 @@
-# 🧪 Selenium Interview Preparation Repository
+# 🧪 Selenium Preparation Repository
 
 This repository represents my **hands-on Selenium interview preparation**, built with a strong focus on **DOM understanding, locator strategy, and real automation scenarios**.
 
