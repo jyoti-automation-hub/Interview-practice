@@ -72,6 +72,38 @@
 - button.primaryBtn
 ---
 
+## ✅ Understanding Tags (Elements) vs Attributes (CSS / XPath Basics)
+
+### ✔ What are Tags / Elements?
+Tags (also called **elements**) are the **HTML keywords** that define the structure of the page.
+
+---
+### 🌐 Example DOM
+```html
+<div class="form-block">
+  <label for="username">Username</label>
+  <input type="text" id="username">
+</div>
+```
+Examples of tag names:
+- `div`
+- `label`
+- `input`
+
+👉 These are the **actual HTML elements**  
+👉 They are **NOT written with `@` in XPath**
+
+---
+
+### ✔ What are Attributes?
+Attributes provide **additional information** about an element.  
+They are written **inside the opening tag** in the format:
+-  Attributes Identified
+  - div has attribute → class="form-block"
+  - label has attribute → for="username"
+  - input has attributes →
+	- type="text"
+  - id="username"
 
 
 
