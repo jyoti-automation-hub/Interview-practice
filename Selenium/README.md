@@ -6,21 +6,6 @@ Rather than memorizing answers, this repo demonstrates **how I think while solvi
 
 ---
 
-## 📁 Repository Structure
-
-Selenium/
-├── CSS/
-├── Xpath/
-├── Selenium_Questions/
-└── README.md
-
-
-
-
-Each folder targets a **specific Selenium interview skill**.
-
----
-
 ## 🎯 CSS Folder — Locator Decision Making
 
 This folder contains questions where a **DOM structure is given**, and the goal is to decide **which CSS selector should be used and why**.
