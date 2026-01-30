@@ -50,6 +50,7 @@
 <div class="card highlighted">Product Card</div>
 ```
 ---
+- card and highlighted 2 separate classes
 - .card.highlighted
 
 - When an element has multiple classes, I chain them using dots without spaces.
