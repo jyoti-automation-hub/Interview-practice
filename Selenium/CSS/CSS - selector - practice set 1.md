@@ -152,9 +152,90 @@ input[id*='search']
 
 ---
 
+## ✅ Q6 — CSS Attribute Ends With Selector (`$=`)
+
+### 📜 Rule
+Use the **ends-with (`$=`)** selector when an attribute value always ends with a fixed suffix.
+
+**Format:**
+```css
+tag[attribute$='value']
+```
+
+---
+
+### 🌐 DOM Structure
+```html
+<span id="error_msg"></span>
+```
+
+---
+
+### 🎯 CSS Selector
+```css
+span[id$='msg']
+```
+
+---
+
+### ✅ What it Selects
+Selects the **span element** whose `id` ends with `msg`.
+
+---
+
+### 🧠 Easy Memory Rule
+- `$` means **ends**
+- Use `$=` when the **ending part** of the attribute is stable
+
+---
+
+### 🎤 Interview-Friendly Explanation
+> “When attribute values are dynamic but consistently end with the same word, I use the ends-with selector to make my locator stable and reliable.”
+
+---
+
+## ✅ Q7 — CSS Attribute Starts With Selector (`^=`)
+
+### 📜 Rule
+Use the **starts-with (`^=`)** selector when an attribute value always begins with a fixed prefix.
+
+**Format:**
+```css
+tag[attribute^='value']
+```
+
+---
+
+### 🌐 DOM Structure
+```html
+<div id="prod_123"></div>
+```
+
+---
+
+### 🎯 CSS Selector
+```css
+div[id^='prod']
+```
+
+---
+
+### ✅ What it Selects
+Selects the **div element** whose `id` starts with `prod`.
+
+---
+
+### 🧠 Easy Memory Rule
+- `^` means **starts**
+- Use `^=` when the **starting part** of the attribute is stable
+
+---
+
+### 🎤 Interview-Friendly Explanation
+> “When attribute values are dynamic but always start with the same prefix, I use the starts-with selector to keep my locator stable.”
 
 
-
+---
 
 
 
