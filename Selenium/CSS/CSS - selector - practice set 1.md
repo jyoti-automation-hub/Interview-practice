@@ -73,7 +73,7 @@
 - button.primaryBtn
 ---
 
-## ✅ Understanding Tags (Elements) vs Attributes (CSS / XPath Basics)
+## 🧠  Understanding Tags (Elements) vs Attributes (CSS / XPath Basics) 🧠
 
 ### ✔ What are Tags / Elements?
 Tags (also called **elements**) are the **HTML keywords** that define the structure of the page.
