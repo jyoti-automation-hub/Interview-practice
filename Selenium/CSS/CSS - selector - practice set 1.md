@@ -236,7 +236,54 @@ Selects the **div element** whose `id` starts with `prod`.
 
 
 ---
+## ✅ Q8 — Combined CSS Selector (Tag + Class + Attribute)
 
+### 📜 Rule
+Use a **combined selector** when you want **maximum precision** by combining:
+- tag
+- class
+- attribute
+
+**Format:**
+```css
+tag.className[attribute='value']
+```
+
+---
+
+### 🌐 DOM Structure
+```html
+<button class="btn primaryBtn" type="submit">Login</button>
+```
+
+---
+
+### 🎯 CSS Selector
+```css
+button.primaryBtn[type='submit']
+```
+
+---
+
+### ✅ What it Selects
+Selects the **button element**:
+- whose tag is `button`
+- whose class includes `primaryBtn`
+- whose `type` attribute is `submit`
+
+---
+
+### 🧠 Easy Memory Rule
+- Combine selectors when you need **high accuracy**
+- Order usually followed:
+  ```
+  tag → class → attribute
+  ```
+
+---
+
+### 🎤 Interview-Friendly Explanation
+> “When multiple similar elements exist, I combine tag, class, and attribute to make the locator very specific and stable. This avoids false matches and reduces flakiness.”
 
 
 
