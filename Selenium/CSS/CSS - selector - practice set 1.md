@@ -128,12 +128,26 @@ input[id*='search']         /* contains */
 div[id^='prod']             /* starts with */
 span[id$='error']           /* ends with */
 
-
-
 ---
 
+## ✅ Q5 — CSS Attribute Contains Selector (`*=`)
 
+### 📜 Rule / Format
+```css
+tag[attribute*='value']
+```
+---
+- tag → HTML element (recommended for clarity)
+- attribute → id, class, name, type, etc.
+- 	*= → contains
+ -  alue → stable part of the attribute
 
+### 🌐 Example DOM
+
+<input id="search-input-987">
+---
+input[id*='search']
+---
 
 
 
