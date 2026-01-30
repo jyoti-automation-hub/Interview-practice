@@ -101,9 +101,7 @@ They are written **inside the opening tag** in the format:
 -  Attributes Identified
   - div has attribute → class="form-block"
   - label has attribute → for="username"
-  - input has attributes →
-	- type="text"
-  - id="username"
+  - input has attributes → type="text" and id="username"
 
 ---
 
