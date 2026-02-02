@@ -14,10 +14,9 @@ Playwright uses a client–server architecture where test code talks directly to
 ### And why do we even need BrowserContext?
 
 **Answer:**
+BrowserContext is an isolated browser session, like an incognito window, while a Page is a single tab inside that context. Playwright runs each test in a separate BrowserContext so cookies, storage, and login state are not shared, which avoids test interference.
 
-Playwright runs each test in a separate BrowserContext, which is like an incognito browser profile.
-
-This ensures no cookies, storage, or login state is shared between tests.
+In Playwright, each test runs in its own BrowserContext, so even if multiple tests run together, they don’t share cookies, storage, or login state. Inside a BrowserContext, a Page represents the actual tab where actions like clicking or typing happen.
 
 ---
 
