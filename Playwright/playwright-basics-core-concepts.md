@@ -6,13 +6,7 @@
 
 **Answer:**
 
-Playwright uses a client–server architecture where the test code talks directly to the browser engines (Chromium, Firefox, WebKit) via browser-specific protocols.
-
-Playwright talks directly to the browser, not through WebDriver like Selenium.
-
-Because of this direct connection, it can automatically wait for elements, handle modern JavaScript apps better, and reduce flaky tests.
-
-That’s why Playwright tests are usually faster and more stable.
+Playwright uses a client–server architecture where test code talks directly to browser engines like Chromium, Firefox, and WebKit using browser-specific protocols. Unlike Selenium, it doesn’t use WebDriver. Because of this direct communication, Playwright has built-in auto-waits, handles modern JavaScript applications better, and reduces flaky tests, which makes it faster and more stable.
 
 ---
 
