@@ -21,3 +21,14 @@ The main difference is that implicit wait applies to all element searches, while
 
 ***🎤Why is Thread.sleep() not recommended in Selenium automation?***
 Thread.sleep() is not recommended in Selenium because it waits for a fixed amount of time regardless of whether the condition is met earlier. This slows down test execution and can make tests flaky.
+
+---
+ Mock 1
+1️⃣ Basics – DONE
+2️⃣ Framework & Design ← we start here
+3️⃣ Real-world scenarios
+4️⃣ Browser & driver management
+5️⃣ Wait strategies & exception handling
+6️⃣ Parallel execution & stability
+7️⃣ Coding / problem-solving
+ 
