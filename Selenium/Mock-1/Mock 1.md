@@ -1,8 +1,10 @@
 ***🎤 What is Selenium, and what are its main components?***
+---
 Selenium is an open-source web automation tool used to automate web applications. Its main components are Selenium WebDriver for browser automation, Selenium IDE for record and playback, and Selenium Grid for running tests in parallel across multiple browsers and machines.
 
 ---
 ***🎤What is the difference between Selenium WebDriver and Selenium Grid?***
+---
 Selenium WebDriver is used to automate browsers and interact with web elements. Selenium Grid is used to run tests in parallel across multiple browsers and machines, which helps reduce execution time and supports cross-browser testing.
 
 ---
