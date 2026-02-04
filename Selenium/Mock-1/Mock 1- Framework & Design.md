@@ -72,9 +72,12 @@ Why this matters in Selenium (real-life example)
 ---
 
 ***How do you handle test data in Selenium automation?***
----e
+---
 
-I handle test data by keeping it separate from test logic, usually in config or data files. This mak tests easier to maintain and allows us to change data without modifying the test code.
+I handle test data by keeping it separate from test logic, usually in config or data files. This make tests easier to maintain and allows us to change data without modifying the test code.
 
 ---
-***
+***How do you capture screenshots or logs when a Selenium test fails?***
+---
+
+
