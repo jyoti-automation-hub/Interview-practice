@@ -81,3 +81,11 @@ I handle test data by keeping it separate from test logic, usually in config or 
 ---
 Yes, we can handle screenshots and reporting in the Base class. In some frameworks, hooks or listeners are used instead to automatically trigger this logic on test failure.
 
+---
+
+***How would you wait for an element to be clickable in Selenium?***
+---
+---
+
+
+I use an explicit wait to wait until the element is clickable, and then perform the click action. This ensures the element is visible and ready before interacting with it.
