@@ -69,5 +69,12 @@ Why this matters in Selenium (real-life example)
     > Tests run independently
     >  No clashes
 
+---
+
+***How do you handle test data in Selenium automation?***
+---e
+
+I handle test data by keeping it separate from test logic, usually in config or data files. This mak tests easier to maintain and allows us to change data without modifying the test code.
 
 ---
+***
