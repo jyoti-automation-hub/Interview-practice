@@ -21,3 +21,21 @@ I handle flaky tests by using stable locators and avoiding hard waits like Threa
 
 ***How do you handle dynamic elements in Selenium?***
 ---
+I handle dynamic elements by using stable locators instead of hard-coded values. Depending on the DOM, I use XPath with contains or starts-with, or prefer CSS selectors when they are reliable. The goal is to avoid brittle locators that change frequently
+
+---
+
+***How do you handle StaleElementReferenceException in Selenium?***
+---
+> StaleElementReferenceException - It occurs when the page changes and the previously located element is no longer valid, so Selenium must find it again.
+> I handle StaleElementReferenceException by re-locating the element and using explicit waits. Since the DOM gets refreshed, I make sure to find the element again before interacting with it.
+
+---
+
+***How do you handle multiple windows or tabs in Selenium?***
+---
+I handle multiple windows using getWindowHandles() to get all window IDs and then switch to the required window based on a condition. After completing actions, I switch back to the main window.
+
+---
+
+
