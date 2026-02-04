@@ -48,4 +48,26 @@ I make sure tests can run on different browsers and that browser setup is handle
 
 I run Selenium tests in parallel using test frameworks like TestNG by configuring parallel execution. The main challenges are handling shared resources and making sure WebDriver instances are thread-safe.
 
+> Thread-safe means:
+👉 Each test running in parallel uses its own WebDriver instace , so tests don’t interfere with each other.
+
+Why this matters in Selenium (real-life example)
+
+---
+Imagine you run 2 tests in parallel:
+	•	Test A opens Chrome
+	•	Test B opens Firefox
+
+❌ Not thread-safe case:
+Both tests share the same WebDriver variable
+→ One test closes the browser
+→ Other test crashes
+→ Flaky failures
+
+✅ Thread-safe case:
+Each test has its own WebDriver instance
+→ Tests run independently
+→ No clashes
+
+
 ---
