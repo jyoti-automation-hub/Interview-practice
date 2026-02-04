@@ -38,4 +38,14 @@ I handle multiple windows using getWindowHandles() to get all window IDs and the
 
 ---
 
+***How do you handle browser and driver management in Selenium?***
+---
+I make sure tests can run on different browsers and that browser setup is handled before execution, so tests are not hard-coded to one browser.
 
+---
+***How do you run Selenium tests in parallel, and what challenges have you faced with it?***
+---
+
+I run Selenium tests in parallel using test frameworks like TestNG by configuring parallel execution. The main challenges are handling shared resources and making sure WebDriver instances are thread-safe.
+
+---
