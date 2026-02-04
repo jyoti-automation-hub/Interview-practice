@@ -25,7 +25,7 @@ I handle dynamic elements by using stable locators instead of hard-coded values.
 
 ---
 
-***How do you handle StaleElementReferenceException in Selenium?***
+***✌🏻How do you handle StaleElementReferenceException in Selenium?***
 ---
 > StaleElementReferenceException - It occurs when the page changes and the previously located element is no longer valid, so Selenium must find it again.
 > I handle StaleElementReferenceException by re-locating the element and using explicit waits. Since the DOM gets refreshed, I make sure to find the element again before interacting with it.
@@ -43,7 +43,7 @@ I handle multiple windows using getWindowHandles() to get all window IDs and the
 I make sure tests can run on different browsers and that browser setup is handled before execution, so tests are not hard-coded to one browser.
 
 ---
-***How do you run Selenium tests in parallel, and what challenges have you faced with it?***
+***✌🏻How do you run Selenium tests in parallel, and what challenges have you faced with it?***
 ---
 
 I run Selenium tests in parallel using test frameworks like TestNG by configuring parallel execution. The main challenges are handling shared resources and making sure WebDriver instances are thread-safe.
@@ -77,7 +77,7 @@ Why this matters in Selenium (real-life example)
 I handle test data by keeping it separate from test logic, usually in config or data files. This make tests easier to maintain and allows us to change data without modifying the test code.
 
 ---
-***How do you capture screenshots or logs when a Selenium test fails?***
+***✌🏻How do you capture screenshots or logs when a Selenium test fails?***
 ---
-
+Yes, we can handle screenshots and reporting in the Base class. In some frameworks, hooks or listeners are used instead to automatically trigger this logic on test failure.
 
