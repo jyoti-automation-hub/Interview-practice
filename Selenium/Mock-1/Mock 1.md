@@ -30,13 +30,4 @@ Thread.sleep() is not recommended in Selenium because it waits for a fixed amoun
 > Implicit wait waits up to the given time and continues as soon as the element is found, whereas Thread.sleep always waits for the full time.
 
 ---
- Mock 1
- ---
-1️⃣ Basics – DONE
-2️⃣ Framework & Design ← we start here
-3️⃣ Real-world scenarios
-4️⃣ Browser & driver management
-5️⃣ Wait strategies & exception handling
-6️⃣ Parallel execution & stability
-7️⃣ Coding / problem-solving
  
