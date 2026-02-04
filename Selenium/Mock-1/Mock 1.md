@@ -27,6 +27,8 @@ The main difference is that implicit wait applies to all element searches, while
 ---
 Thread.sleep() is not recommended in Selenium because it waits for a fixed amount of time regardless of whether the condition is met earlier. This slows down test execution and can make tests flaky.
 
+> Implicit wait waits up to the given time and continues as soon as the element is found, whereas Thread.sleep always waits for the full time.
+
 ---
  Mock 1
  ---
