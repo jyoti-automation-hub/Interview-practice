@@ -45,7 +45,7 @@ This folder focuses on **XPath creation based on DOM relationships**, which is c
 
 ---
 
-## 🧠 Selenium_Questions — Real Interview Scenarios
+## 🧠 Selenium_Questions — Scenarios
 
 This folder contains **scenario-based Selenium questions** and **core Selenium concepts**, written exactly the way they are discussed in interviews.
 
