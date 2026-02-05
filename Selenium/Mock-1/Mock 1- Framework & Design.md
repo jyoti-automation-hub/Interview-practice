@@ -21,7 +21,7 @@ I handle flaky tests by using stable locators and avoiding hard waits like Threa
 
 ***How do you handle dynamic elements in Selenium?***
 ---
-I handle dynamic elements by using stable locators instead of hard-coded values. Depending on the DOM, I use XPath with contains or starts-with, or prefer CSS selectors when they are reliable. The goal is to avoid brittle locators that change frequently
+I handle dynamic elements by avoiding absolute XPaths and using stable locators like relative XPath with contains() or CSS selectors, along with proper waits.
 
 ---
 
