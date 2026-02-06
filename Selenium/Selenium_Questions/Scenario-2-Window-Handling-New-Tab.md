@@ -1,6 +1,6 @@
 # 🔵 Scenario 2 – Product Click Opens in New Tab (Amazon / Flipkart)
 
-## 🎯 Interview Scenario
+## 🎯 Scenario
 
 On an e-commerce website like **Amazon or Flipkart**:
 
@@ -16,7 +16,7 @@ Automate clicking a product from the listing page and handle window switching.
 
 ---
 
-## 🎤 Interview Question
+## 🎤 Question
 
 > When clicking a product opens a new tab, how do you handle multiple windows in Selenium and switch control to the new tab?
 
@@ -36,9 +36,11 @@ Automate clicking a product from the listing page and handle window switching.
     <a href="/samsung-s23" class="product-link" target="_blank">View</a>
   </div>
 </div>
-
 ```
+
 ---
+
+
 ### ✅ Selenium Code (Interview-Level)
 
 ```java
@@ -64,6 +66,7 @@ for (String currentWindowId : allWindowIds) {
 
 // Driver control is now on product detail page
 
+```
 
 ---
 ### 🧠 Explanation (How to Explain in Interview)
