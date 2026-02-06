@@ -1,6 +1,6 @@
 # 🔵 Scenario 1 – Hover, Wait, and Navigate (Amazon / Flipkart)
 
-## 🎯 Interview Scenario
+## 🎯  Scenario
 
 On an e-commerce website like **Amazon or Flipkart**:
 
@@ -15,7 +15,7 @@ Automate navigation from **Electronics → Mobiles** using Selenium.
 
 ---
 
-## 🎤 Interview Question
+## 🎤  Question
 
 > How would you automate a hover-based category menu, wait for the submenu to load, and click a submenu option in a real e-commerce application like Amazon or Flipkart
 
@@ -93,7 +93,7 @@ mobiles.click();
 👉 **Waiting for submenu = waiting for the Mobiles element to become clickable**
 
 ---
-## 🔁 Scenario 1 – Follow-up Interview Questions & Answers
+## 🔁 Scenario 1 – Follow-up Questions & Answers
 
 ### ❓ Follow-up 1: What if the submenu takes longer to load?
 
