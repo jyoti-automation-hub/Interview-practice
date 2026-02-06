@@ -28,6 +28,7 @@ I handle dynamic elements by avoiding absolute XPaths and using stable locators 
 ***✌🏻How do you handle StaleElementReferenceException in Selenium?***
 ---
 > StaleElementReferenceException - It occurs when the page changes and the previously located element is no longer valid, so Selenium must find it again.
+ 
 > I handle StaleElementReferenceException by re-locating the element and using explicit waits. Since the DOM gets refreshed, I make sure to find the element again before interacting with it.
 
 ---
