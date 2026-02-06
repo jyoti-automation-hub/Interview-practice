@@ -80,9 +80,3 @@
 - Selenium cannot access them directly, so we must use `switchTo().frame()` first.
 
 ---
-
-## Q10. What is Page Object Model and why do we use it?
-
-**Answer:**
-- POM is a design pattern where each page has its own class with locators and actions.  
-- It makes the framework maintainable, reusable, and easy to manage when UI changes.
