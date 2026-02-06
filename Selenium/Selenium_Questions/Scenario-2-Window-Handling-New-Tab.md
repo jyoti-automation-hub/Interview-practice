@@ -128,7 +128,9 @@ I would move the window-switching logic into a reusable utility or base class me
 ### ❓ Follow-up 6: Why didn’t you use `driver.close()` instead of `driver.quit()`?
 
 **Answer:**  
-`driver.close()` closes only the current browser window, while `driver.quit()` closes all browser sessions. I use `close()` when I want to close a specific tab and continue testing, and `quit()` at the end of execution.
+`driver.close()` closes only the current browser window,
+> I use `close()` when I want to close a specific tab and continue testing
+>`driver.quit()` closes all browser sessions- quit() at the end of execution.
 
 ---
 
