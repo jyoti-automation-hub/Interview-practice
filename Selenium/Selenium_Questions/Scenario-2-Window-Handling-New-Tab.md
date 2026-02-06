@@ -41,7 +41,7 @@ Automate clicking a product from the listing page and handle window switching.
 ---
 
 
-### ✅ Selenium Code (Interview-Level)
+### ✅ Selenium Code
 
 ```java
 // Click on product
@@ -69,7 +69,7 @@ for (String currentWindowId : allWindowIds) {
 ```
 
 ---
-### 🧠 Explanation (How to Explain in Interview)
+### 🧠 Explanation (How to Explain)
 
 - `getWindowHandle()`  
   → Stores the **current (parent) window ID**
@@ -88,7 +88,7 @@ for (String currentWindowId : allWindowIds) {
 
 ---
 
-## 🔁 Scenario 2 – Follow-up Interview Questions & Answers (Window Handling)
+## 🔁 Scenario 2 – Follow-up Questions & Answers (Window Handling)
 
 ### ❓ Follow-up 1: What if the product sometimes opens in the same tab instead of a new tab?
 
@@ -139,8 +139,7 @@ I first check synchronization issues by adding proper explicit waits before swit
 
 ---
 
-### 🔑 Interview Tip
-
+### 🔑 Tip
 - Always store the parent window ID
 - Don’t assume a new tab will always open
 - Handle both same-tab and new-tab scenarios
