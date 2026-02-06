@@ -40,8 +40,10 @@
 ## Q5. What is Explicit Wait and why not Thread.sleep?
 
 **Answer:**
-- Explicit wait waits for a specific condition like element visible or clickable.  
-- I avoid Thread.sleep because it is fixed time, makes tests slow, and causes flaky behavior.
+> Explicit wait is used for specific conditions, such as waiting for an element to be visible or clickable before performing an action
+
+
+> I avoid Thread.sleep because it is fixed time, makes tests slow, and causes flaky behavior.
 
 ---
 
