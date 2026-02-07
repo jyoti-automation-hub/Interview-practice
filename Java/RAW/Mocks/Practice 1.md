@@ -52,8 +52,19 @@ String is immutable, meaning once created, its value cannot change. StringBuilde
 ---
 HashMap works using hashing. When we put a key, it uses hashCode to decide which bucket to store it in. If two different keys go to the same bucket, HashMap stores them together and uses equals() to find the correct key during retrieval.
 
+> 🎤 What happens if two keys have the same hashCode?
+
+> If two keys have the same hashCode, HashMap stores them in the same bucket and uses equals() to differentiate them. 
 
 
+---
+
+***Why do we need both hashCode() and equals() in HashMap?
+Why isn’t hashCode alone enough?***
+---
+hashCode() is used to decide the bucket where the key should be stored. equals() is used to compare keys inside the same bucket when there is a collision, to identify the correct key.
+
+---
 
 
 
