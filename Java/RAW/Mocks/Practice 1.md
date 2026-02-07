@@ -139,6 +139,15 @@ this refers to the current class object. It is mainly used to differentiate inst
 
 > A thread allows a program to perform multiple tasks at the same time.
 
+---
+***Real-life example***
+---
+> Imagine a web application:
+	•	One thread handles user login
+	•	Another thread handles payment
+	•	Another thread processes background logs
+
+All running simultaneously.***That’s multithreading.***
 
 
 
