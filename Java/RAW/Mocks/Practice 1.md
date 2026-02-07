@@ -102,6 +102,25 @@ An abstract class can have both abstract and concrete methods. An interface main
 List is used when we want to maintain insertion order and allow duplicates. Set is used when we want to avoid duplicate elements. Map is used to store data in key-value pairs, where keys must be unique.
 
 ---
+***🎤What is polymorphism? And what is the difference between compile-time and runtime polymorphism?***
+
+---
+Polymorphism means one object having multiple forms. Compile-time polymorphism happens through method overloading, and runtime polymorphism happens through method overriding.
+
+---
+***🎤Can we override a static method in Java? Why or why not?***
+
+---
+No, static methods cannot be overridden because they belong to the class, not the object. They are resolved at compile time, so overriding does not apply to them.
+
+---
+
+***🎤What is the difference between this and super keyword?***
+
+---
+this refers to the current class object. It is mainly used to differentiate instance variables from constructor parameters when they have the same name. super refers to the parent class and is used to access parent class variables, methods, or constructors.
+
+---
 
 
 
