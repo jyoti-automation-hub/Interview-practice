@@ -66,7 +66,9 @@ hashCode() is used to decide the bucket where the key should be stored. equals()
 
 ---
 
-
+1️⃣ HashMap uses hashCode() to decide the bucket
+2️⃣ If two keys go to the same bucket, it’s called a collision
+3️⃣ equals() is used to find the correct key inside that bucket
 
 
 
