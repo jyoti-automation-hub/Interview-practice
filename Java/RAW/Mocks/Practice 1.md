@@ -72,10 +72,17 @@ hashCode() is used to decide the bucket where the key should be stored. equals()
 
 ---
 ***🎤What is method overloading and method overriding?***
+
 ---
 ***🎤 What is the difference between abstraction and encapsulation?***
----
 
+---
+***🎤 What is the difference between an interface and an abstract class?***
+
+---
+An abstract class can have both abstract and concrete methods. An interface mainly defines method contracts, and the implementing class provides the implementation.
+
+>A class can extend only one abstract class, but it can implement multiple interfaces.
 
 
 
