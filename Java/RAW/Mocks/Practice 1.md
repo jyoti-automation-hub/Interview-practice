@@ -40,10 +40,17 @@ An immutable class is a class whose state cannot be changed once the object is c
 	•	Make fields private final
 	•	Do not provide setters
 
+---
 
+***🎤 What is the difference between String, StringBuilder, and StringBuffer?***
+---
+String is immutable, meaning once created, its value cannot change. StringBuilder and StringBuffer are mutable, meaning their values can be modified without creating new objects. The main difference is that StringBuffer is thread-safe, while StringBuilder is not.
 
+---
 
-
+***🎤 How does HashMap work internally?***
+---
+HashMap works using hashing. When we put a key, it uses hashCode to decide which bucket to store it in. If two different keys go to the same bucket, HashMap stores them together and uses equals() to find the correct key during retrieval.
 
 
 
