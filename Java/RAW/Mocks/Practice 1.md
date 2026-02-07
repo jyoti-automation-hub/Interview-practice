@@ -84,6 +84,40 @@ An abstract class can have both abstract and concrete methods. An interface main
 
 >A class can extend only one abstract class, but it can implement multiple interfaces.
 
+---
+***🎤 What is the difference between final, finally, and finalize?***
+
+---
+> final is a keyword used to prevent modification. A final variable cannot be changed, a final method cannot be overridden, and a final class cannot be extended.
+
+> finally is a block used in exception handling that always executes.
+
+> finalize is a method called by the garbage collector before an object is destroyed.
+
+---
+
+***🎤What is the difference between List, Set, and Map?***
+
+---
+List is used when we want to maintain insertion order and allow duplicates. Set is used when we want to avoid duplicate elements. Map is used to store data in key-value pairs, where keys must be unique.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
