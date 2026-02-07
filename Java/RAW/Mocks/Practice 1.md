@@ -70,6 +70,11 @@ hashCode() is used to decide the bucket where the key should be stored. equals()
 2️⃣ If two keys go to the same bucket, it’s called a collision
 3️⃣ equals() is used to find the correct key inside that bucket
 
+---
+***🎤What is method overloading and method overriding?***
+---
+***🎤 What is the difference between abstraction and encapsulation?***
+---
 
 
 
