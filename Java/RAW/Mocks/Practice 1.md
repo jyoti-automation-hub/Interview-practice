@@ -165,8 +165,30 @@ When tests run in parallel, multiple threads might try to use the same resource 
 
 ---
 
+A lambda expression is a shorter way to write anonymous functions.
+
+---
+***🎤 What is a functional interface?***
+
+***🎤 Why can lambda work only with functional interfaces?***
+
+***🎤 What is a Stream in Java 8?***
+
+---
+A way to process collections (like List, Set) in a functional style.
+
+---
+
+***🎤 What is the difference between map() and filter() in Streams?***
+
+***🎤 Why are Streams preferred over traditional loops?***
+
+---
 
 
+Streams are preferred because they make code more readable and concise, and allow chaining operations like filter and map in a clean way.
+
+---
 
 
 
