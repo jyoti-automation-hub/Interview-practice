@@ -157,7 +157,13 @@ All running simultaneously.***That’s multithreading.***
 
 When tests run in parallel, multiple threads might try to use the same resource at the same time. Synchronization makes sure only one thread accesses it at a time, so we avoid data issues and flaky tests.
 
+---
+***Java 8***
+---
 
+***What is a lambda expression in Java 8?***
+
+---
 
 
 
