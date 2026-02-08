@@ -86,10 +86,57 @@ System.out.println(result);
 ```
 ---
 
+## Question 4: filter() + map() Chaining
 
+### 📝 Problem Statement
 
+Given the following list:
 
+```java
+List<String> list = Arrays.asList("Apple", "Banana", "Avocado", "Mango");
+```
+---
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
+List<String> list = Arrays.asList("Apple", "Banana", "Avocado", "Mango");
+
+List<String> result = list.stream()
+                          .filter(s -> s.startsWith("A"))
+                          .map(String::toUpperCase)
+                          .collect(Collectors.toList());
+
+System.out.println(result);
+```
+
+---
+## Question 5: Count Elements Using Stream
+
+### 📝 Problem Statement
+
+Given the following list:
+
+```java
+List<String> list = Arrays.asList("Apple", "Banana", "Avocado", "Mango", "Apricot");
+```
+
+---
+```java
+import java.util.Arrays;
+import java.util.List;
+
+List<String> list = Arrays.asList("Apple", "Banana", "Avocado", "Mango", "Apricot");
+
+long count = list.stream()
+                 .filter(s -> s.startsWith("A"))
+                 .count();
+
+System.out.println(count);
+```
+
+---
 
 
 
