@@ -149,9 +149,13 @@ this refers to the current class object. It is mainly used to differentiate inst
 
 All running simultaneously.***That’s multithreading.***
 
+---
 
+***🎤When running tests in parallel, why do we need synchronization?***
 
+---
 
+When tests run in parallel, multiple threads might try to use the same resource at the same time. Synchronization makes sure only one thread accesses it at a time, so we avoid data issues and flaky tests.
 
 
 
