@@ -37,3 +37,21 @@ public class LongestSubstringWithoutRepeating {
 }
 
 '''
+
+
+
+***When exactly do you move left?***
+>👉 We move left inside a while loop when the set already contains the current right character.
+>We keep moving left until the duplicate is removed.
+
+>That “while duplicate exists” part is important.
+
+***When do we update max length?***
+>👉 After the window becomes valid (no duplicates), update maxLength = max(maxLength, right - left + 1).
+
+***Time complexity***
+>👉 O(n)
+Because:
+	•	Each character is added once
+	•	Each character is removed at most once
+Left and right both move only forward.
