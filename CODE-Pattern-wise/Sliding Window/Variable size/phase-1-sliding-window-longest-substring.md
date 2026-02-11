@@ -5,6 +5,12 @@
 
 ***A substring must be continuous.***
 
+
+***Input: s = "eceba", k = 2  
+Output: 3  
+Explanation: "ece" is the longest substring with 2 distinct characters.***
+
+
 ---
 '''java 
 
