@@ -11,8 +11,8 @@
 ***🎤 What is the difference between HashMap and ConcurrentHashMap?***
 
 ---
-HashMap is not thread-safe, meaning if multiple threads modify it at the same time, it can lead to data inconsistency. ConcurrentHashMap is designed to handle concurrent access safely.
-
+HashMap is not thread-safe, so if multiple threads modify it simultaneously, it can lead to data inconsistency. 
+ConcurrentHashMap is thread-safe and is used when tests run in parallel to safely handle shared data.
 > Also, ConcurrentHashMap does not allow null keys or null values, while HashMap allows one null key and multiple null values.
 ---
 
