@@ -56,12 +56,24 @@ Which one is better for frequent insertions/deletions in the middle?
 ---
 == compares object references, meaning whether two variables point to the same object. equals() compares the content or logical equality of the objects.
 
+1. 
+2. For primitive types like int or double, what does == compare?
+ >   For primitive types, == compares the actual values.
+
+int a = 10;
+int b = 10;
+a == b  // true
+
+Because primitives don’t have references like objects.
+
+   
 ---
 
 ***🎤What is the difference between throw and throws in Java?***
 
 ---
-throw is used inside a method to actually throw an exception. throws is used in the method signature to declare that the method may throw a checked exception.
+•	throw → used inside method body to actually throw an exception
+•	throws → used in method signature to declare that the method may throw an exception
 
 >  throw is used to throw an exception, and throws is required only when the method declares a checked exception.
 ---
