@@ -1,3 +1,13 @@
+***Ask:
+	•	Why?
+	•	What happens internally?
+	•	Real-life example?
+	•	What if it fails?
+	•	When would you use it in automation?***
+
+
+
+
 ***🎤 What is the difference between HashMap and ConcurrentHashMap?***
 
 ---
