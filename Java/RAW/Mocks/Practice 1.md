@@ -69,15 +69,6 @@ Because primitives don’t have references like objects.
    
 ---
 
-***🎤What is the difference between throw and throws in Java?***
-
----
-•	throw → used inside method body to actually throw an exception
-•	throws → used in method signature to declare that the method may throw an exception
-
->  throw is used to throw an exception, and throws is required only when the method declares a checked exception.
----
-
 ***🎤 What is the difference between checked and unchecked exceptions in Java?***
 
 ---
