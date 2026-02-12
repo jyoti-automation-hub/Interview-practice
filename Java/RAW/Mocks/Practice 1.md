@@ -11,6 +11,7 @@
 ***🎤 What is the difference between HashMap and ConcurrentHashMap?***
 
 ---
+
 HashMap is not thread-safe, so if multiple threads modify it simultaneously, it can lead to data inconsistency. 
 ConcurrentHashMap is thread-safe and is used when tests run in parallel to safely handle shared data.
 > Also, ConcurrentHashMap does not allow null keys or null values, while HashMap allows one null key and multiple null values.
@@ -21,6 +22,7 @@ If tests are running in parallel and you use a shared HashMap, what problem can 
 
 ***🔁 Follow-up 2
 If each test has its own local HashMap (not shared), do you need ConcurrentHashMap?***
+
 ---
 
 ***🎤What is the difference between ArrayList and LinkedList?***
