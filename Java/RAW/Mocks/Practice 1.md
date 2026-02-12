@@ -28,7 +28,26 @@ If each test has its own local HashMap (not shared), do you need ConcurrentHashM
 ***🎤What is the difference between ArrayList and LinkedList?***
 
 ---
-ArrayList is better for frequent reads because it provides O(1) random access. LinkedList is preferred when there are frequent insertions or deletions, especially in the middle of the list.
+ArrayList uses a dynamic array internally, so elements are stored in contiguous memory.
+LinkedList uses a doubly linked list, where each element points to the next and previous element.
+
+In ArrayList, accessing elements by index is fast (O(1)), but inserting or deleting in the middle is slow because shifting is required.
+In LinkedList, insertion and deletion are faster (especially in the middle), but accessing by index is slower (O(n)).
+
+🔁 Follow-up 1
+
+Which one is better for frequent read operations?
+
+👉 ArrayList, because it provides fast random access using index.
+
+⸻
+
+🔁 Follow-up 2
+
+Which one is better for frequent insertions/deletions in the middle?
+
+👉 LinkedList, because it doesn’t require shifting elements like ArrayList.
+
 
 ---
 
