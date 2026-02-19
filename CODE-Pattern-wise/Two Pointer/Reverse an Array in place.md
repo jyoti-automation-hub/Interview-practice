@@ -79,7 +79,6 @@ public class Reverse {
 
 >We had to convert:
 char[] arr = s.toCharArray();
----
-Because arrays are mutable.
+> Because arrays are mutable.
 ---
 	
