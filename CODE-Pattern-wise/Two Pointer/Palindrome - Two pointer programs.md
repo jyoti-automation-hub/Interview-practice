@@ -24,7 +24,7 @@ false
 
 ---
 
-## Java Code (Two Pointers, No Boolean)
+## Code (Two Pointers, No Boolean)
 ---
 
 ```java
@@ -65,3 +65,77 @@ public class PalindromeCheck {
 - If the loop completes without any mismatch:
   - Print `true`
 - No boolean variable is required because the method exits as soon as the result is determined
+
+---
+
+
+```java
+public class ValidPalindrome {
+
+    public static boolean isPalindrome(String s) {
+
+        if (s == null) return false;
+
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right) {
+
+            // Skip non-alphanumeric characters from left
+            while (left < right &&
+                   !Character.isLetterOrDigit(s.charAt(left))) {
+                left++;
+            }
+
+            // Skip non-alphanumeric characters from right
+            while (left < right &&
+                   !Character.isLetterOrDigit(s.charAt(right))) {
+                right--;
+            }
+
+            // Compare characters (case-insensitive)
+            if (Character.toLowerCase(s.charAt(left)) !=
+                Character.toLowerCase(s.charAt(right))) {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        String s1 = "A man, a plan, a canal: Panama";
+        String s2 = "race a car";
+        String s3 = "Madam!";
+        String s4 = "12321";
+
+        System.out.println(isPalindrome(s1)); // true
+        System.out.println(isPalindrome(s2)); // false
+        System.out.println(isPalindrome(s3)); // true
+        System.out.println(isPalindrome(s4)); // true
+    }
+}
+
+```
+
+---
+
+🔵 Q2 – Palindrome
+
+We are NOT modifying anything.
+
+We are only:
+	•	Reading characters
+	•	Comparing characters
+
+So this is enough:
+s.charAt(left)
+s.charAt(right)
+
+No modification → No need for extra array.
+
+
