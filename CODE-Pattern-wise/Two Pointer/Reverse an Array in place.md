@@ -68,10 +68,10 @@ public class Reverse {
         System.out.println(new String(arr));
     }
 }
-```
----
 
-***We needed to modify characters.***
+```
+
+***We needed to modify character***
 ---
 >Since:
 	>•	String is immutable
