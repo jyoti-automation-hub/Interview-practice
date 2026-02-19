@@ -2,6 +2,7 @@
 ---
 
 ```java
+
 public class ReverseArray {
 
  public static void reverse(int[] arr) {
@@ -43,7 +44,7 @@ Approach (Two Pointers)
 # Reverse a string (without using built-in reverse)
 ---
 
-	```java
+```java
 public class Reverse {
 
     public static void main(String[] args) {
@@ -68,7 +69,6 @@ public class Reverse {
         System.out.println(new String(arr));
     }
 }
-
 ```
 
 ***We needed to modify character***
