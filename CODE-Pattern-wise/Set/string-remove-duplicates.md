@@ -37,7 +37,7 @@ public class RemoveDuplicates {
 
 ---
 
-> 🔥 Simple Mental Model
+ ## 🔥 Simple Mental Model
 > •	append() → builds string internally
 > •	toString() → converts builder into final String
 
