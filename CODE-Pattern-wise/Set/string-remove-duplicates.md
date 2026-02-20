@@ -1,3 +1,6 @@
+# Remove duplicate characters from a string
+
+---
 
 import java.util.HashSet;
 
