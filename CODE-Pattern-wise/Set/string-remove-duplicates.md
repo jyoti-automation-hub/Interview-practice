@@ -37,9 +37,9 @@ public class RemoveDuplicates {
 
 ---
 
-🔥 Simple Mental Model
-> 	•	append() → builds string internally
->	•	toString() → converts builder into final String
+> 🔥 Simple Mental Model
+> •	append() → builds string internally
+> •	toString() → converts builder into final String
 
 # Quick Notes – Remove Duplicate Characters (Java Doubts)
 
