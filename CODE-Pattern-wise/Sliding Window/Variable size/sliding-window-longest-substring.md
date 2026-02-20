@@ -1,31 +1,59 @@
+# Longest Substring Without Repeating Characters (Sliding Window)
 
-***🔹 Longest Substring Without Repeating Characters***
+## 🔹 Problem Statement
 
-***Given a string s, find the length of the longest substring without repeating characters.***
+Given a string `s`, find the length of the longest substring without repeating characters.
 
-***A substring must be continuous.***
-
-
-***Input: s = "eceba", k = 2  
-Output: 3  
-Explanation: "ece" is the longest substring with 2 distinct characters.***
-
+A substring must be continuous.
 
 ---
-'''java 
 
-import java.util.*;
+## 🔹 Example
 
-public class LongestSubstringWithoutRepeating {
+Input:
+```
+"abcabcbb"
+```
 
-    public static void main(String[] args) {
+Output:
+```
+3
+```
 
-        String s = "abcabcbb";
+Explanation:
+The longest substring without repeating characters is `"abc"`.
 
+---
+
+## 🔹 Approach (Sliding Window – Variable Size)
+
+We use:
+
+- `left` pointer → start of window
+- `right` pointer → end of window
+- `HashSet` → to track characters in current window
+- `maxLength` → to store maximum window size
+
+### Logic:
+
+1. Expand window using `right`
+2. If duplicate found → shrink window using `left`
+3. Update maximum length
+4. Continue until end of stri
+---
+
+## 🔹 Java Code
+
+```java
+import java.util.HashSet;
+
+public class LongestSubstring {
+
+    public static int lengthOfLongestSubstring(String s) {
+
+        HashSet<Character> set = new HashSet<>();
         int left = 0;
-        int max = 0;
-
-        Set<Character> set = new HashSet<>();
+        int maxLength = 0;
 
         for (int right = 0; right < s.length(); right++) {
 
@@ -35,16 +63,43 @@ public class LongestSubstringWithoutRepeating {
             }
 
             set.add(s.charAt(right));
-            max = Math.max(max, right - left + 1);
+            maxLength = Math.max(maxLength, right - left + 1);
         }
 
-        System.out.println("Longest length: " + max);
+        return maxLength;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(lengthOfLongestSubstring("abcabcbb")); // 3
+        System.out.println(lengthOfLongestSubstring("bbbbb"));    // 1
+        System.out.println(lengthOfLongestSubstring("pwwkew"));   // 3
+        System.out.println(lengthOfLongestSubstring("abba"));     // 2
     }
 }
+```
 
-'''
+---
 
+## 🔹 Time Complexity
 
+```
+O(n)
+```
+
+Each character is visited at most twice (once by right, once by left).
+
+---
+
+## 🔹 Space Complexity
+
+```
+O(k)
+```
+
+Where `k` is number of unique characters in the window.
+
+---
 
 ***When exactly do you move left?***
 >👉 We move left inside a while loop when the set already contains the current right character.
