@@ -2,6 +2,7 @@
 
 ---
 
+``` java
 import java.util.HashSet;
 
 public class RemoveDuplicates {
@@ -31,6 +32,8 @@ public class RemoveDuplicates {
         System.out.println(removeDuplicates("programming")); // progamin
     }
 }
+
+```
 
 ---
 
