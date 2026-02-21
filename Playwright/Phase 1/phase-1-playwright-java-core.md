@@ -1,7 +1,7 @@
 # Phase 1 – Playwright Java Core Foundations
 ---
 
-🧱 Architecture & Isolation
+***🧱 Architecture & Isolation***
 	1.	What is the difference between Browser, BrowserContext, and Page?
 	2.	What happens when we use browser.newPage()?
 	3.	When would you manually create a BrowserContext?
