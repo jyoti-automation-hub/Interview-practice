@@ -1,4 +1,4 @@
-# Stage 2 – Playwright Java Scenario Mastery (Interview Focused)
+# Stage 2 – Playwright Java Scenario Mastery
 
 ---
 
