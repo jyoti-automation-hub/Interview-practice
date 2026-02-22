@@ -50,4 +50,28 @@ page.click("text=Continue");
 ```
 ---
 
+# Stage 1 – Locator Practice (Multiple Similar Elements)
+
+## 🧪 Practice DOM
+
+```html
+<ul>
+  <li><button>Add to Cart</button></li>
+  <li><button>Add to Cart</button></li>
+  <li><button>Add to Cart</button></li>
+</ul>
+```
+
+---
+
+# 🎯 Task
+
+>Click the first “Add to Cart” button only.
+
+---
+
+page.locator("text=Add to Cart").first().click();
+
+
+
 
