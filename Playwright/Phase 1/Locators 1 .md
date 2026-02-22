@@ -43,7 +43,11 @@ page.click("text=Login");
 >	2.	Click the Continue button
 
 ---
+
+```html
 page.fill("[placeholder='Enter email']", "test@gmail.com");
 page.click("text=Continue");
-
+```
 ---
+
+
