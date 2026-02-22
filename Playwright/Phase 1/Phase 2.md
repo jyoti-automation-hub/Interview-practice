@@ -41,6 +41,8 @@
 ## 🏗 7️⃣ Framework Design
 
 ---
+## ❓ Question
+---
 ***You have 200 Playwright tests. All require login.
 How would you handle authentication efficiently?***
 ---
@@ -66,7 +68,7 @@ page = context.newPage();
 
 ---
 
-# 2
+## ❓ Question
 ---
 Think Amazon example.
 
