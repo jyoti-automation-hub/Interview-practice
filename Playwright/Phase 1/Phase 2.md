@@ -67,3 +67,43 @@ context = browser.newContext(withStorageState("auth.json"));
 page = context.newPage();
 
 ---
+
+# 2
+---
+Think Amazon example.
+
+User A → Customer
+User B → Admin
+
+If both are inside the same BrowserContext →
+They share cookies → Same session → Same user ❌
+
+---
+
+I create two separate BrowserContexts so each user has an isolated session. Then I create a Page inside each context and perform actions independently.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
