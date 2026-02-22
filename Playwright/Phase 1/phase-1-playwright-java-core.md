@@ -49,6 +49,69 @@ Page represents a single tab inside that context where we perform actions like c
 
 ---
 
+***What happens when we use browser.newPage()?***
+---
+It creates a new Page inside a default BrowserContext. If no context exists, Playwright creates one internally.
+
+---
+
+# Stage 1 – BrowserContex
+
+***❓ Question***
+***When would you manually create a BrowserContext?***
+
+---
+
+## ✅ Answer
+
+I manually create a BrowserContext when I need session isolation, such as simulating multiple users or handling separate login states. It allows control over cookies, storage, and permissions.
+
+---
+
+## 🛒 Example (Amazon Scenario)
+
+If I need to simulate:
+
+- Customer user browsing products
+- Admin user approving orders
+
+I create two separate BrowserContexts so both users have independent login sessions and data.
+
+Using the same context would share cookies and session, making them behave as the same user.
+
+---
+# Stage 1 – Question 4
+
+## ❓ Question
+Can two pages in the same BrowserContext simulate two users? Why?
+
+---
+
+## ❌ Answer
+
+No. Two pages in the same BrowserContext share the same cookies, storage, and login session, so they behave as the same user.
+
+To simulate independent users, we must create separate BrowserContexts.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ***What is auto-wait in Playwright?***
 ---
 
