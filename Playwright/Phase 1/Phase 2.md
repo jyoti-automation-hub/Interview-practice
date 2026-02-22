@@ -13,3 +13,14 @@ No repeated login.
 
 ---
 
+// Step 1: Login once
+loginWithValidUser();
+
+// Step 2: Save session
+context.saveStorageState("auth.json");
+
+// Step 3: Reuse in other tests
+context = browser.newContext(withStorageState("auth.json"));
+page = context.newPage();
+
+---
