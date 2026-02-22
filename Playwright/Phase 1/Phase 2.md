@@ -46,25 +46,76 @@
 ***You have 200 Playwright tests. All require login.
 How would you handle authentication efficiently?***
 ---
-Solution (storageState idea):
-	1.	Login once.
-	2.	Save the login session (cookies + storage) to a file.
-	3.	For all other tests, start the browser using that saved session.
-	4.	Tests start already logged in.
 
-No repeated login.
+If every test performs login:
+
+- ❌ Slower execution
+- ❌ Repeated authentication calls
+- ❌ Increased flakiness
+- ❌ Unnecessary server load
+
+We need a scalable and efficient authentication strategy.
 
 ---
 
-// Step 1: Login once
-loginWithValidUser();
+# ✅ Solution: Use `storageState`
 
-// Step 2: Save session
-context.saveStorageState("auth.json");
+Playwright allows saving authenticated session state (cookies + localStorage) into a file and reusing it across tests.
 
-// Step 3: Reuse in other tests
-context = browser.newContext(withStorageState("auth.json"));
-page = context.newPage();
+---
+# 🧠 High-Level Strategy
+
+1. Login once
+2. Save authentication session to a file
+3. Reuse the saved session in all other tests
+4. Tests start already logged in
+
+✔ No repeated login  
+✔ Faster execution  
+✔ Cleaner test design  
+
+---
+
+# 🛠 Implementation (Java – Playwright)
+
+---
+
+## 🟢 Step 1: Login Once and Save Session
+
+```java
+Browser browser = playwright.chromium().launch();
+BrowserContext context = browser.newContext();
+Page page = context.newPage();
+
+// Perform login
+page.navigate("https://example.com/login");
+page.fill("#username", "validUser");
+page.fill("#password", "password");
+page.click("#loginButton");
+
+// Wait for successful login
+page.waitForURL("**/dashboard");
+
+// Save authentication state
+context.storageState(new BrowserContext.StorageStateOptions()
+        .setPath(Paths.get("auth.json")));
+
+browser.close();
+
+```
+
+---
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
