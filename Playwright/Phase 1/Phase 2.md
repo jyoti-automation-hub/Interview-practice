@@ -40,8 +40,6 @@
 
 ## 🏗 7️⃣ Framework Design
 
-**Q:** How would you structure a scalable Playwright framework?
-
 ---
 ***You have 200 Playwright tests. All require login.
 How would you handle authentication efficiently?***
@@ -84,14 +82,56 @@ I create two separate BrowserContexts so each user has an isolated session. Then
 
 ---
 
+## 🧪 Example Code
+
+```java
+
+// Create first user session
+BrowserContext userAContext = browser.newContext();
+Page userAPage = userAContext.newPage();
+userAPage.navigate("https://app.com/login");
+// login as User A
+
+// Create second user session
+BrowserContext userBContext = browser.newContext();
+Page userBPage = userBContext.newPage();
+userBPage.navigate("https://app.com/login");
+// login as User B
+
+// Now both users can perform actions independently
 
 
+```
+---
 
 
+## ❓ Question
+How do you handle multiple tabs or popups in Playwright?
 
+---
 
+## ✅ Approach
 
+When a new tab or popup opens, Playwright creates a new `Page` inside the same `BrowserContext`.
 
+We listen for the new page event, capture the new `Page` object, and then perform actions on it.
+
+---
+
+## 🧪 Example Code
+
+```java
+// Wait for new tab to open
+Page newPage = context.waitForPage(() -> {
+    page.click("text=Open New Tab");
+});
+
+// Perform actions in the new tab
+newPage.click("text=Continue");
+
+```
+
+---
 
 
 
