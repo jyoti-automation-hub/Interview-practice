@@ -26,3 +26,24 @@ page.click("text=Login");
 ```
 
 ---
+
+# Stage 1 – Locator Practice (Placeholder + Text)
+
+## 🧪 Practice DOM
+
+```html
+<input type="text" placeholder="Enter email" />
+<button>Continue</button>
+```
+
+---
+
+# 🎯 Task
+>	1.	Type "test@gmail.com" into the input field
+>	2.	Click the Continue button
+
+---
+page.fill("[placeholder='Enter email']", "test@gmail.com");
+page.click("text=Continue");
+
+---
