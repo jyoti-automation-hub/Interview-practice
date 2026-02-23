@@ -103,20 +103,6 @@ context.storageState(new BrowserContext.StorageStateOptions()
 browser.close();
 
 ```
-
----
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 ## ❓ Question
@@ -187,7 +173,62 @@ newPage.click("text=Continue");
 ---
 
 
+# Stage 2 – CI Failures Debugging (Playwright Java)
 
+## ❓ Question
+Tests pass locally but fail in CI. How do you debug?
+
+---
+
+## ✅ Approach
+
+If tests fail in CI but pass locally, I:
+
+- Check for synchronization or timing issues
+- Verify that locators are stable
+- Enable Playwright Trace Viewer to analyze the failure
+- Compare environment differences like browser version or headless execution
+
+---
+## 🧠 Key Tool
+
+Playwright **Trace Viewer** helps visually inspect failed tests in CI, including actions, network calls, and screenshots.
+
+# Stage 2 – Handling Flaky Tests (Playwright Java)
+
+## ❓ Question
+How do you handle flaky tests?
+
+---
+
+## ✅ Answer
+
+To handle flaky tests, I first check for synchronization issues or unstable locators.  
+I avoid fixed waits like `Thread.sleep()` and rely on Playwright’s auto-wait mechanism.  
+I also use Trace Viewer to analyze failures and fix the root cause instead of masking the issue.
+
+# Stage 2 – Parallel Execution (Playwright Java)
+
+## ❓ Question
+How does parallel execution work in Playwright?
+
+---
+
+## ✅ Answer
+
+Playwright supports parallel execution using multiple workers.  
+Each worker runs tests in separate BrowserContexts, ensuring isolation and faster execution.
+
+# Stage 2 – Framework Design (Playwright Java)
+
+## ❓ Question
+How would you structure a scalable Playwright framework?
+
+---
+
+## ✅ Answer
+
+I would structure the framework using Page Object Model so that locators and test logic are separated. I’d keep tests, page classes, and utilities in different layers to keep things clean. I’d also centralize things like authentication and browser setup so we don’t repeat code everywhere. The main goal is to keep the framework easy to maintain and scalable as the number of tests grows.
 
 
 
