@@ -16,7 +16,6 @@ Playwright uses a client–server architecture where test code talks directly to
 **Answer:**
 
 > We use BrowserContext to avoid test interference. It’s like running tests in incognito mode, so no cookies or login details are shared.
-> Page represents a single tab where test actions like click and type happen.
 
 In Playwright, each test runs in its own BrowserContext, so even if multiple tests run together, they don’t share cookies, storage, or login state. Inside a BrowserContext, a Page represents the actual tab where actions like clicking or typing happen.
 
