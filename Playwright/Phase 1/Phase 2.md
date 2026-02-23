@@ -231,9 +231,28 @@ How would you structure a scalable Playwright framework?
 I would structure the framework using Page Object Model so that locators and test logic are separated. I’d keep tests, page classes, and utilities in different layers to keep things clean. I’d also centralize things like authentication and browser setup so we don’t repeat code everywhere. The main goal is to keep the framework easy to maintain and scalable as the number of tests grows.
 
 
+---
+
+# 🎤 New Question
+
+## ❓ Question 
+If a project grows from 50 tests to 500 tests,
+what is the biggest risk in framework design?
+
+---
+When a project grows from 50 → 500 tests,
+the biggest risk is:
+
+👉 Code duplication and poor maintainability.
+
+If:
+• Locators are scattered
+• Setup is repeated
+• Utilities are not centralized
+• Hardcoded data everywhere
 
 
-
+---
 
 
 
