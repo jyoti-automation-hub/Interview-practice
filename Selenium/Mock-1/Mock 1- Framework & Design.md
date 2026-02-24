@@ -119,15 +119,15 @@ Imagine you run 2 tests in parallel:
 
 
 Now:
-	•	Thread 1 → Launches Chrome
-	•	Thread 2 → Launches Firefox
-	•	Both use same driver reference
-	•	Thread 1 calls driver.quit()
-	•	Thread 2 is still running
+	> •	Thread 1 → Launches Chrome
+	> •	Thread 2 → Launches Firefox
+	> •	Both use same driver reference
+	> •	Thread 1 calls driver.quit()
+	> •	Thread 2 is still running
 
 💥 Firefox test crashes.
-
 This is a race condition because:
+
 ---
 
 ***How do you handle test data in Selenium automation?***
