@@ -66,6 +66,7 @@ Why this matters in Selenium (real-life example)
    > Flaky failures
 
 > ✅ Thread-safe case:
+
     > Each test has its own WebDriver instance
     > Tests run independently
     >  No clashes
