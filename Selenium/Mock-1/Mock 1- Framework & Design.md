@@ -57,19 +57,16 @@ Why this matters in Selenium (real-life example)
 
 ---
 > Imagine you run 2 tests in parallel:
-
-
+---
    > Test A opens Chrome
-   >Test B opens Firefox
-
-> ❌ Not thread-safe case:
-
-
+   > Test B opens Firefox
+   > ❌ Not thread-safe case:
+---
    > Both tests share the same WebDriver variable
    > One test closes the browser
    > Other test crashes
    > Flaky failures
-
+---
 > ✅ Thread-safe case:
 
     > Each test has its own WebDriver instance
