@@ -47,7 +47,13 @@ I make sure tests can run on different browsers and that browser setup is handle
 ***✌🏻How do you run Selenium tests in parallel, and what challenges have you faced with it?***
 ---
 
-I run Selenium tests in parallel using test frameworks like TestNG by configuring parallel execution. The main challenges are handling shared resources and making sure WebDriver instances are thread-safe.
+
+I use TestNG to enable parallel execution and since WebDriver is not thread-safe, I use ThreadLocal to maintain separate driver instances per thread.
+
+
+The main challenge in parallel execution is handling shared resources, especially WebDriver, since it is not thread-safe.
+To make it thread-safe, I use ThreadLocal so each test thread gets its own independent WebDriver instance and there is no interference between tests.
+
 
 > Thread-safe means:
 
