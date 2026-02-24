@@ -71,8 +71,10 @@ WebDriver is not thread-safe because it maintains a single browser session
 ---
 
 ***If two threads share the same driver and both call driver.get() at the same time, what problem can happen?***
+
 ---
 unpredictable behavior and session conflicts.
+
 ---
 # Why This Matters in Selenium (Real-Life Example)
 
