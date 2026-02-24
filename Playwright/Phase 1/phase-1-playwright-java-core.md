@@ -96,6 +96,59 @@ To simulate independent users, we must create separate BrowserContexts.
 
 ---
 
+## 🔹 follow up Question 1  
+### Can multiple BrowserContexts exist inside one Browser?
+
+### ✅ Answer
+
+Yes.
+
+A single Browser instance can have multiple BrowserContexts.
+
+Each context is fully isolated with:
+- Separate cookies
+- Separate storage
+- Separate sessions
+
+---
+
+## 🔹follow up Question 2  
+### Do two pages created from the same context share cookies?
+
+### ✅ Answer
+
+Yes.
+
+Pages inside the same BrowserContext share:
+- Cookies
+- localStorage
+- Session data
+
+---
+
+## 🔹follow up Question 3  
+### Which is heavier — creating a new Browser or a new Context?
+
+### ✅ Answer
+
+Creating a new Browser is heavier because it launches a full browser engine process.
+
+Creating a new Context is lightweight since it runs inside the existing browser process.
+
+---
+
+## 🔹follow up Question 4  
+### When would you manually create a BrowserContext instead of using browser.newPage()?
+
+### ✅ Answer
+
+When test isolation is required — for example:
+
+- Simulating multiple users (admin + customer)
+- Preventing session sharing between tests
+
+---
+
 # Stage 1 – Question 5
 
 ## ❓ Question
