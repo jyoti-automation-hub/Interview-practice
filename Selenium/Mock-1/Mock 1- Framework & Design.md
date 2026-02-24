@@ -53,19 +53,35 @@ I run Selenium tests in parallel using test frameworks like TestNG by configurin
 
 👉 Each test running in parallel uses its own WebDriver instace , so tests don’t interfere with each other.
 
-Why this matters in Selenium (real-life example)
+
+# Why This Matters in Selenium (Real-Life Example)
+
+## Scenario
+
+Imagine you run 2 tests in parallel:
+
+- Test A opens **Chrome**
+- Test B opens **Firefox**
 
 ---
-> Imagine you run 2 tests in parallel:
+
+## ❌ Not Thread-Safe Case
+
+- Both tests share the same `WebDriver` variable
+- One test closes the browser
+- The other test crashes
+- Leads to flaky failures
+
 ---
-   > Test A opens Chrome
-   > Test B opens Firefox
-   > ❌ Not thread-safe case:
----
-   > Both tests share the same WebDriver variable
-   > One test closes the browser
-   > Other test crashes
-   > Flaky failures
+
+## What Actually Happens
+
+1. Test A starts → Opens Chrome  
+2. Test B starts → Opens Firefox  
+3. Both use the same `WebDriver` reference  
+4. One test calls `driver.quit()`  
+5. The other test fails unexpectedly  
+
 ---
 > ✅ Thread-safe case:
 
