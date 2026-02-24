@@ -51,7 +51,7 @@
 
 **Answer:**
 - Implicit wait is global and applies to all elements.  
-- Explicit wait waits for a specific condition like element visible or clickable.  
+- Explicit wait is used for specific conditions, such as waiting for an element to be visible or clickable before performing an action
 - In real automation, I mostly use explicit wait because it is more reliable.
 
 ---
