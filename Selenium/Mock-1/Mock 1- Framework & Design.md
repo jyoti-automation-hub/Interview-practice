@@ -52,13 +52,15 @@ I use TestNG to enable parallel execution and since WebDriver is not thread-safe
 
 
 The main challenge in parallel execution is handling shared resources, especially WebDriver, since it is not thread-safe.
-To make it thread-safe, I use ThreadLocal so each test thread gets its own independent WebDriver instance and there is no interference between tests.
+To make it thread-safe, I use ThreadLocal  to maintain separate driver instances per thread and there is no interference between tests.
 
 
-Instead remember the structure:
-	1.	How I enable parallel → TestNG
-	2.	What is the problem → Shared resources / WebDriver not thread-safe
-	3.	What is the solution → ThreadLocal
+> Instead remember the structure:
+> 	1.	How I enable parallel → TestNG
+>	2.	What is the problem → Shared resources / WebDriver not thread-safe
+>	3.	What is the solution → ThreadLocal
+
+---
 
 > Thread-safe means:
 
