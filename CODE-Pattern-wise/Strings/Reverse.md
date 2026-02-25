@@ -26,25 +26,37 @@ I ma gninrael avaJ
 ```java
 public class ReverseEachWord {
 
-    public static void main(String[] args) {
-        String sentence = "Java is fun";
-        System.out.println(reverseWords(sentence));
-    }
+    public static String reverseWords(String sentence) {
 
-    static String reverseWords(String sentence) {
         String[] words = sentence.split(" ");
         StringBuilder result = new StringBuilder();
 
         for (String word : words) {
-            StringBuilder reversed = new StringBuilder(word);
-            result.append(reversed.reverse()).append(" ");
+
+            StringBuilder reversed = new StringBuilder();
+
+            for (int i = word.length() - 1; i >= 0; i--) {
+                reversed.append(word.charAt(i));
+            }
+
+            result.append(reversed).append(" ");
         }
 
         return result.toString().trim();
     }
-}
+
+    public static void main(String[] args) {
+        System.out.println(reverseWords("Java is fun"));
+    }
+
 
 ```
+## 🔹 Why Use StringBuilder?
+
+- Strings are immutable.
+- `+` inside loop creates multiple objects.
+- `StringBuilder` is efficient (O(n)).
+  
 ---
 
 ## 🧠 Explanation (Interview-Friendly, Simple)
