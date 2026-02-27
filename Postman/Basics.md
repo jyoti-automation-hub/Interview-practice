@@ -77,5 +77,57 @@ If the data is invalid, the server returns an appropriate error response such as
 
 ---
 
+# API – 3-Tier Architecture
+
+## Question
+What is 3-tier architecture?
+
+## Short Interview Answer
+3-tier architecture is a software design pattern that divides an application into three layers:
+
+1. Presentation Layer (UI)
+2. Business Logic Layer (API/Backend)
+3. Database Layer
+
+Each layer has a separate responsibility, which improves scalability, maintainability, and security.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
