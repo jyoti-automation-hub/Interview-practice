@@ -93,10 +93,31 @@ Each layer has a separate responsibility, which improves scalability, maintainab
 
 ---
 
+# API – Testing Standalone APIs
 
+## Question
+What do you test in standalone APIs?
 
+## Short Interview Answer
+In standalone APIs, we test the status code, response body, and response structure.
 
+We validate positive and negative scenarios, boundary values, and error handling.
 
+We may also check authentication, response time, and database validation if required.
+
+---
+
+# API – Testing Third-Party APIs
+
+## Question
+What do you test in third-party APIs?
+
+## Short Interview Answer
+In third-party APIs, we validate the status code and response data according to the agreed contract.
+
+Since we do not control the external system, we mainly test integration behavior and how our system handles failures or errors from that API.
+
+---
 
 
 
