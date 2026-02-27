@@ -63,5 +63,19 @@ pm.test("Status code is 200", function () {
 ```
 ---
 
+# API – Server-Side Validation
+
+## Question
+What do you understand by server-side validation?
+
+## Short Interview Answer
+Server-side validation is the validation performed in the backend after receiving a request from the client.
+
+The server checks whether the input data is valid, complete, and secure before processing it.
+
+If the data is invalid, the server returns an appropriate error response such as 400 Bad Request.
+
+---
+
 
 
