@@ -65,3 +65,32 @@ public class ReverseEachWord {
 ```
 ---
 
+
+
+```java
+public class ReverseEachWord {
+
+    public static void main(String[] args) {
+        String sentence = "Java is fun";
+        System.out.println(reverseWords(sentence));
+    }
+
+    static String reverseWords(String sentence) {
+
+        String[] words = sentence.split(" ");
+        StringBuilder result = new StringBuilder();
+
+        for (String word : words) {
+
+            for (int i = word.length() - 1; i >= 0; i--) {
+                result.append(word.charAt(i));
+            }
+
+            result.append(" ");
+        }
+
+        return result.toString().trim();
+    }
+}
+
+```
