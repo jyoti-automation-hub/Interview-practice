@@ -36,6 +36,8 @@ options.stream();
 
 # Java Streams – anyMatch() 
 
+## I use anyMatch() with Java Streams to verify whether a specific value exists in dropdowns or UI lists without writing manual loops.
+
 ## Scenario  
 Verify whether a dropdown contains a specific value (example: **"India"**) using Java Streams instead of a traditional loop.
 
@@ -103,7 +105,3 @@ We are checking **whether a dropdown contains a specific value** (for example: `
 - Very commonly used in **product-based company automation frameworks**
 
 ---
-
-### Interview One-Liner
-
-> I use `anyMatch()` with Java Streams to verify whether a specific value exists in dropdowns or UI lists without writing manual loops.
