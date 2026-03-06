@@ -69,11 +69,6 @@ wait.until(driver -> driver.findElement(By.id("x")).isDisplayed());
 input -> action
 ```
 
-Here:
-
-- **Input** → WebDriver object (`driver`)  
-- **Action** → find the element and check if it is displayed
-
 ### What it Returns
 
 - `isDisplayed()` returns **true or false**  
