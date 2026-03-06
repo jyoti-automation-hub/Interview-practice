@@ -38,10 +38,6 @@ List<String> validProducts =
    - `" "` (space)
    - `""` (empty string)
 
-4. **`->` (Lambda arrow)**  
-   Means **“for each element `p`, apply this condition”**.  
-   It connects the input (`p`) to the logic after it.
-
 5. **`p.trim()`**  
    Removes **leading and trailing spaces** from the string.  
    Examples:
@@ -53,14 +49,19 @@ List<String> validProducts =
    - Returns `true` if empty  
    - Returns `false` if not empty  
 
-7. **`!` (NOT operator)**  
+7. **`!` (NOT operator)**
+
+   5️⃣ Filter decision
+
+Since the condition is TRUE, the element stays in the stream.
+
    Reverses the result:
    - `isEmpty() == true` → `!true` → `false` (remove)
    - `isEmpty() == false` → `!false` → `true` (keep)
 
    ✅ Result: **only non-empty values are kept**
 
-8. **`collect(Collectors.toList())`**  
+9. **`collect(Collectors.toList())`**  
    Streams cannot be reused directly.  
    `collect()`:
    - Takes all remaining elements from the stream
