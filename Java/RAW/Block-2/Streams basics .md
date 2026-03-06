@@ -34,7 +34,7 @@ options.stream();
 ```
 ---
 
-# Java Streams – anyMatch() (SDET Interview Ready)
+# Java Streams – anyMatch() 
 
 ## Scenario  
 Verify whether a dropdown contains a specific value (example: **"India"**) using Java Streams instead of a traditional loop.
