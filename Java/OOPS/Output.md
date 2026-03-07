@@ -3,5 +3,10 @@ x++  → post-increment (use value first, then increase)
 
 ---
 
-literal + literal → compile-time → same pool object
-variable + literal → runtime → new object
+> literal + literal → compile-time → same pool object
+> variable + literal → runtime → new object
+
+---
+
+
+> Integer cache range = -128 to 127
