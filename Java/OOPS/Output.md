@@ -36,3 +36,8 @@ int → Integer ( autoboxing )
 Object is the parent of all classes, but Java still chooses the most specific method.
 
 ---
+
+If both operands are numbers → arithmetic addition
+If one operand is String → string concatenation
+
+***System.out.println(10 + 20 + "Java" + 10 + 20);
