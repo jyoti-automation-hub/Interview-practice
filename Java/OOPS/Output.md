@@ -10,3 +10,14 @@ x++  → post-increment (use value first, then increase)
 
 
 > Integer cache range = -128 to 127
+
+---
+
+Static blocks run when the class is loaded
+before the main method executes.
+
+---
+
+final → value cannot be reassigned
+
+---
