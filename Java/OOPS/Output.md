@@ -30,3 +30,9 @@ int → double
 ---
 
 int → Integer ( autoboxing )
+
+---
+
+Object is the parent of all classes, but Java still chooses the most specific method.
+
+---
