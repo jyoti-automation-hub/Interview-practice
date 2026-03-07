@@ -21,3 +21,12 @@ before the main method executes.
 final → value cannot be reassigned
 
 ---
+
+widening conversions:
+int → long
+int → float
+int → double
+
+---
+
+int → Integer ( autoboxing )
