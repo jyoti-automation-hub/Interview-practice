@@ -129,8 +129,8 @@ public class ValidPalindrome {
 We are NOT modifying anything.
 
 We are only:
-	•	Reading characters
-	•	Comparing characters
+	>•	Reading characters
+	>•	Comparing characters
 
 So this is enough:
 s.charAt(left)
