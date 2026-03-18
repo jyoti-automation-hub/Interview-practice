@@ -213,6 +213,8 @@ Car (abstract)
 ElectricCar (concrete)
 
 
+### 👉 Use intermediate abstract classes to group common behavior
+
 #### Because Car already extends Vehicle, so ElectricCar gets both Car + Vehicle behavior. This maintains hierarchy and avoids skipping abstraction levels.
 
 
