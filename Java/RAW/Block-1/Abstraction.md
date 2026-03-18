@@ -1,4 +1,4 @@
-# 🔥 **Abstraction – Notes ** 
+# 🔥 ** Abstraction – Notes ** 
 
 ---
 Objects are created for classes, not for methods.
