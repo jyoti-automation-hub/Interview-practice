@@ -167,7 +167,7 @@ class Child extends Parent {
 ❌ No  
 
 👉 Static methods belong to **class, not object**  
-👉 So they are **hidden, not overridden**
+👉 So they are **hidden, not overridden** if the child defines the same method, it is method hiding.
 
 ### Example
 
