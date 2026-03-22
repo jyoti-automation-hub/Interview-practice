@@ -7,7 +7,7 @@
 
 ---
 
-🔹 Why NOT object for static methods?
+## 🔹 Why NOT object for static methods?
 
 Because static methods belong to the class, not the object
 
