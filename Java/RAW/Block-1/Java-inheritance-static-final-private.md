@@ -17,6 +17,8 @@ There is actually no polymorphism involved.
 
 ## ✅ Correct Understanding
 
+#### 👉 “For static methods, Java uses reference type because they are resolved at compile time. For instance methods, it uses object type because of runtime polymorphism.”
+
 ---
 
 ## 🔹 1. Static Methods
