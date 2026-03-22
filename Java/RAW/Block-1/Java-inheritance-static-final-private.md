@@ -1,6 +1,19 @@
 # Inheritance in Java – Static, Final, Private & Static Variables
 
+---
+👉 Java uses:
+	•	Object → for instance methods (runtime polymorphism)
+	•	Reference → for static methods (compile-time binding)
 
+---
+
+🔹 Why NOT object for static methods?
+
+Because static methods belong to the class, not the object
+
+There is actually no polymorphism involved.
+
+---
 
 ## ✅ Correct Understanding
 
