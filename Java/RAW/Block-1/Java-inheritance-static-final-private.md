@@ -209,4 +209,170 @@ obj.show();   // 👉 Parent method will run
 - Static methods → Inherited, **not overridden** (method hiding)  
 - Final methods → Inherited, **cannot be overridden**  
 - Private members → **Not accessible directly**  
-- Static variables → Accessible (if not private)  
+- Static variables → Accessible (if not private)
+
+---
+
+# Method Hiding vs Method Overriding in Java
+
+---
+
+## 🔹 Case 1: Static Method (Method Hiding)
+
+### Example
+
+```java
+class Parent {
+
+    static void show() {
+        System.out.println("Parent static");
+    }
+
+}
+
+class Child extends Parent {
+
+    static void show() {
+        System.out.println("Child static");
+    }
+
+}
+```
+
+### Call
+
+```java
+Parent p = new Child();
+p.show();
+```
+
+### Output
+
+```
+Parent static
+```
+
+---
+
+## 🔍 What happens step-by-step?
+
+1. Compiler sees: `Parent p`  
+2. `show()` is static  
+3. Static methods are resolved at **compile time**  
+4. So Java binds: `Parent.show()`
+
+✔ Reference type is used  
+❌ Object is ignored  
+
+---
+
+## 👉 Another Call
+
+```java
+Child c = new Child();
+c.show();
+```
+
+### Output
+
+```
+Child static
+```
+
+✔ Because reference type is `Child`
+
+---
+
+# 🔥 Case 2: Non-Static Method (Method Overriding)
+
+### Example
+
+```java
+class Parent {
+
+    void show() {
+        System.out.println("Parent non-static");
+    }
+
+}
+
+class Child extends Parent {
+
+    void show() {
+        System.out.println("Child non-static");
+    }
+
+}
+```
+
+### Call
+
+```java
+Parent p = new Child();
+p.show();
+```
+
+### Output
+
+```
+Child non-static
+```
+
+---
+
+## 🔍 What happens here?
+
+# Method Execution Flow in Java (Static vs Non-Static)
+
+---
+
+## 🔍 What happens step-by-step? (Non-Static Method)
+
+1. Compiler sees: `Parent p`  
+2. Method is **non-static**  
+3. Java waits until **runtime**  
+4. At runtime → object is `Child`  
+5. So Java calls: `Child.show()`
+
+✔ Object type is used  
+✔ Runtime decision (**dynamic dispatch**)
+
+---
+
+## 🧠 Final Mental Model (Very Important)
+
+When you see:
+
+```java
+Parent p = new Child();
+```
+
+### Ask yourself:
+
+### 1️⃣ Is method static?
+
+- YES → Go with **reference type** (`Parent`)
+
+### 2️⃣ Is method non-static?
+
+- YES → Go with **object type** (`Child`)
+
+
+# Static vs Non-Static Calling Rules (Interview Gold)
+
+---
+
+## ⚡ Important Rule
+
+### ✔ Allowed
+
+- Non-static → can call static  
+- Static → can call static  
+
+---
+
+### ❌ Not Allowed
+
+- Static → cannot directly call non-static  
+
+---
