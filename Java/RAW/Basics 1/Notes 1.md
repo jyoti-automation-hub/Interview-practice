@@ -1,5 +1,5 @@
 
-# Final Method vs Final Class (Important Difference)
+# Final Method vs Final Class 
 
 ## 1️⃣ Final Variable
 
