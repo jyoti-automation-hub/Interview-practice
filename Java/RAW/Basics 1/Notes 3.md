@@ -78,6 +78,14 @@ In TestNG, we implement data-driven testing using the **@DataProvider** annotati
 
 TestNG DataProvider provides test data in the form of Object arrays, which are passed as parameters to the test method, allowing the same test to run multiple times with different inputs.
 
+Object[][] is used because it can hold multiple data types and pass them as parameters to the test method.
+
+## ❓ What will happen if the number of parameters in your test method does NOT match the data returned by DataProvider?
+
+- TestNG will throw an exception at runtime  
+- The test will fail due to parameter mismatch  
+- Common error: MethodMatcherException  
+
 ---
 
 In my framework, I used data-driven testing mainly in two ways.
