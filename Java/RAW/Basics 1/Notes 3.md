@@ -8,8 +8,6 @@
 
 ## 1️⃣ What is Data-Driven Testing?
 
-### Short Answer
-
 Data-driven testing is a testing approach where **the same test case is executed multiple times with different sets of input data**.
 
 ### Example
