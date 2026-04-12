@@ -143,3 +143,28 @@ Examples:
 
 ---
 
+## 📸 Screenshot Capture on Failure
+
+- In my framework, screenshots are captured automatically on test failure using the TakesScreenshot interface  
+- I integrated this with TestNG listeners  
+- Whenever a test fails, a screenshot is saved with a timestamp
+---
+
+### 💻 Code
+
+```java
+File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(src, new File("path/to/save/screenshot.png"));
+```
+
+---
+## 🔹 Code Understanding
+
+- File src → stores the screenshot file  
+- TakesScreenshot → interface used to capture screenshot  
+- getScreenshotAs(OutputType.FILE) → takes screenshot and returns it as file  
+- FileUtils.copyFile → saves it to a specific location  
+- You create a folder like → screenshots/  
+- File name usually includes → timestamp  
+
+
