@@ -100,6 +100,6 @@ Object[][] is used because it can hold multiple data types and pass them as para
 
 In my framework, I used data-driven testing mainly in two ways.
 First, using TestNG DataProvider, where I passed multiple sets of input data like login credentials to a single test method.
-Second, in the BDD framework, I used Scenario Outline with Examples to pass dynamic test data like product type and repair type directly from the feature file.
+Second, In BDD, I used Scenario Outline to pass different test data from the feature file.
 
 ---
