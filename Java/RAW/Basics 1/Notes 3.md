@@ -84,7 +84,17 @@ Object[][] is used because it can hold multiple data types and pass them as para
 
 - TestNG will throw an exception at runtime  
 - The test will fail due to parameter mismatch  
-- Common error: MethodMatcherException  
+- Common error: MethodMatcherException
+  
+## ❓ Can we use DataProvider to run tests in parallel? If yes, how?
+
+- Yes, we can run tests in parallel using DataProvider  
+
+- We set parallel = true in DataProvider  
+
+```java
+@DataProvider(parallel = true)
+```
 
 ---
 
