@@ -3,8 +3,6 @@
 
 ## 1️⃣ Final Variable
 
-You said correctly.
-
 ✔ **Value cannot be changed once assigned.**
 
 ### Example
