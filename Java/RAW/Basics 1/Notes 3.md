@@ -103,3 +103,43 @@ First, using TestNG DataProvider, where I passed multiple sets of input data lik
 Second, In BDD, I used Scenario Outline to pass different test data from the feature file.
 
 ---
+
+## 📌 BDD Scenario Outline (Gherkin Example)
+
+### 🔹 Scenario Outline Example
+
+```gherkin
+Feature: Product Repair Selection
+
+Scenario Outline: Select product and repair type
+  Given I am on the product page
+  When I select product "<product>"
+  And I select repair type "<repairType>"
+  Then I should see the repair details
+
+Examples:
+  | product | repairType |
+  | iPhone  | Camera     |
+  | iPhone  | Screen     |
+  | Samsung | Battery    |
+```
+
+---
+
+## 🔹 What’s happening here
+
+- <product> and <repairType> are placeholders  
+- Values are provided in the Examples table  
+- Each row runs the scenario once with different data  
+- This is how data-driven testing is achieved in BDD  
+
+---
+
+## 🔹 How to explain in interview
+
+- Scenario Outline is used in BDD to run the same test with multiple data sets  
+- We define placeholders in the steps and provide test data in the Examples table  
+- Each row is executed as a separate test case
+
+---
+
