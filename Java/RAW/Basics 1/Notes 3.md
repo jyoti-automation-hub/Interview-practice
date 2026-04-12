@@ -41,13 +41,6 @@ These sources supply multiple sets of test data to the same test case.
 ---
 
 # 3️⃣ How Do You Implement Data-Driven Testing in TestNG?
-
-### Expected Interview Answer
-
-In TestNG, we implement data-driven testing using the **@DataProvider** annotation.
-
-The DataProvider returns a **two-dimensional Object array**, and TestNG runs the test method multiple times using the provided data.
-
 ---
 
 # Example Implementation
@@ -80,10 +73,15 @@ public class LoginTest {
 
 ---
 
-
 ## Interview One-Line Answer
+In TestNG, we implement data-driven testing using the **@DataProvider** annotation.
 
-**DataProvider** returns a **two-dimensional `Object[][]` array** where:
+TestNG DataProvider provides test data in the form of Object arrays, which are passed as parameters to the test method, allowing the same test to run multiple times with different inputs.
 
-- each **row** represents a **test execution**
-- each **column** represents **parameters passed to the test method**
+---
+
+In my framework, I used data-driven testing mainly in two ways.
+First, using TestNG DataProvider, where I passed multiple sets of input data like login credentials to a single test method.
+Second, in the BDD framework, I used Scenario Outline with Examples to pass dynamic test data like product type and repair type directly from the feature file.
+
+---
