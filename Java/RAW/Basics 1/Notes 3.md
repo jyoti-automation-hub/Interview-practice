@@ -74,9 +74,8 @@ public class LoginTest {
 ---
 
 ## Interview One-Line Answer
-In TestNG, we implement data-driven testing using the **@DataProvider** annotation.
 
-TestNG DataProvider provides test data in the form of Object arrays, which are passed as parameters to the test method, allowing the same test to run multiple times with different inputs.
+In TestNG, we use the DataProvider annotation to implement data-driven testing. It returns data in the form of Object arrays, and each set of data is passed as parameters to the test method, allowing the same test to run multiple times with different inputs.
 
 Object[][] is used because it can hold multiple data types and pass them as parameters to the test method.
 
