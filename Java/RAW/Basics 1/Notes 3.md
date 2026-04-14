@@ -135,7 +135,7 @@ Examples:
 
 ---
 
-## 🔹 How to explain in interview
+## 🔹 How to 
 
 - Scenario Outline is used in BDD to run the same test with multiple data sets  
 - We define placeholders in the steps and provide test data in the Examples table  
