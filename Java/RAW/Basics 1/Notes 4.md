@@ -8,20 +8,6 @@
 
 ---
 
-# Handling Flaky Tests
-—-
-If a test becomes flaky, first I try to understand the reason.  
-Most of the time it happens because of **unstable locators** or **synchronization issues**.
-
-So I try to:
-
-- Improve the locator strategy
-- Add proper **explicit waits**
-
-If the issue is due to temporary environment problems, then I use **RetryAnalyzer** to rerun the failed test.
-
----
-
 # Q2 — How do you decide which test cases to automate?
 
 Usually I automate the test cases that are part of **regression** and run frequently.
