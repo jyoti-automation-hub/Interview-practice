@@ -128,7 +128,7 @@ Examples:
 
 ## 🔹 What’s happening here
 
-- <product> and <repairType> are placeholders  
+- #### product and #### repairType are placeholders  
 - Values are provided in the Examples table  
 - Each row runs the scenario once with different data  
 - This is how data-driven testing is achieved in BDD  
