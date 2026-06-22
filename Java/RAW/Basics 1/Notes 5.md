@@ -13,7 +13,6 @@ It connects: Feature File → Step Definitions → Automation Code
 A feature file contains scenarios written in Gherkin syntax.
 Extension:  .feature
 
-
 4. What are Step Definitions?
 
 Step definitions are Java methods that implement steps written in the feature file.
